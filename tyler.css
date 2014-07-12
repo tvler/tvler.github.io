@@ -1,4 +1,4 @@
-@import url("reset.css");
+@import "reset.css";
 #content{
    width:100%;
    margin: 0 auto;
@@ -37,4 +37,9 @@ h1{
    padding-top:1em;
    padding-bottom:.2em;
    font-size:1.5em;
+}
+@media (max-width:400px){
+   #date{
+      display:none;
+   }
 }
