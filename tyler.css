@@ -1,4 +1,5 @@
 @import "reset.css";
+html {-webkit-text-size-adjust: none;}
 #content{
    width:100%;
    margin: 0 auto;
