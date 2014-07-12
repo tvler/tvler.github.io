@@ -1,6 +1,6 @@
 @import url("reset.css");
 #content{
-   width:480px;
+   width:100%;
    margin: 0 auto;
 }
 #work{
