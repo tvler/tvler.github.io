@@ -1,12 +1,33 @@
-#center{
-   text-align:center;
+@import url("reset.css");
+#content{
+   width:480px;
+   margin: 0 auto;
+}
+#work{
+   display:table;
+   margin: 0 auto;
+}
+#link{
+   display:table-cell;
+   text-align:left;
+   padding-left:.5em;
+   padding-right:.5em;
+}
+#job{
+   display:table-cell;
+   text-align:right;
+}
+#date{
+   display:table-cell;
+   text-align:left;
 }
 body{
    font-family:"Courier New";
    text-transform:uppercase;
    font-weight:bold;
    font-style:italic;
-
+   text-align:center;
+   background:#e2e2e2;
 }
 a{
    color:#ff6600;
@@ -14,5 +35,6 @@ a{
 }
 h1{
    padding-top:1em;
+   padding-bottom:.2em;
    font-size:1.5em;
 }
