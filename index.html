@@ -4,6 +4,7 @@
    <link rel="stylesheet" type="text/css" href="tyler.css"/>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
    <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+   <script type="text/javascript" src="tyler.js"></script>
    <script>
      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -11,30 +12,6 @@
      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
      ga('create', 'UA-51114943-1', 'tylerdeitz.co');
      ga('send', 'pageview');
-
-   var workSize;
-   var workShown;
-
-   function dynamicDynamics(){
-      if((workSize > window.innerWidth) && (workShown !==false)){
-         document.getElementById("date").style.display = "none";
-         workShown = false;
-      }
-      else if((workSize <= window.innerWidth) && (workShown !== true)){
-         document.getElementById("date").style.display = "table-cell";
-         workShown = true;
-      }
-   }
-
-   document.addEventListener("DOMContentLoaded", function(event) {
-      workSize = document.getElementById("work").offsetWidth;
-      dynamicDynamics();
-   });
-
-   window.onresize = function(){
-      dynamicDynamics();
-   };
-
    </script>
 </head>
 
@@ -71,16 +48,6 @@
                   <div>(2013)</div>
                   <div>(2011-x)</div>
                </div>
-
-      <!--
-
-            <p>manager @ <a href="http://kcpr.org">kcpr.org</a> (2013-14)</p>
-            <p><a href = "http://smashnoir.tumblr.com/">smashnoir.tumblr.com</a> (2013-x)</p>
-            <p><a href="http://www.muzicdotnet.co.nr">musicdotnet.co.nr</a> (2013)</p>
-            <p>undergrad @ <a href="http://laes.calpoly.edu/">laes.calpoly.edu</a> (2011-x)</p>
-
-      -->
-
          </div>
-   <div>
+   </div>
 </body>
