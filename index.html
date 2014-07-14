@@ -11,6 +11,30 @@
      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
      ga('create', 'UA-51114943-1', 'tylerdeitz.co');
      ga('send', 'pageview');
+
+   var workSize;
+   var workShown;
+
+   function dynamicDynamics(){
+      if((workSize > window.innerWidth) && (workShown !==false)){
+         document.getElementById("date").style.display = "none";
+         workShown = false;
+      }
+      else if((workSize <= window.innerWidth) && (workShown !== true)){
+         document.getElementById("date").style.display = "table-cell";
+         workShown = true;
+      }
+   }
+
+   document.addEventListener("DOMContentLoaded", function(event) {
+      workSize = document.getElementById("work").offsetWidth;
+      dynamicDynamics();
+   });
+
+   window.onresize = function(){
+      dynamicDynamics();
+   };
+
    </script>
 </head>
 

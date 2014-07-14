@@ -39,8 +39,10 @@ h1{
    padding-bottom:.2em;
    font-size:1.5em;
 }
+/*
 @media (max-width:416px){
    #date{
       display:none;
    }
 }
+*/
