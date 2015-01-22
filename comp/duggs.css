@@ -1,0 +1,199 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body{
+   background: #4a525a;
+   color: #b4b4b4;
+   font-family:georgia;
+}
+#wrapper{
+   width: 1000px;
+   margin: 0 auto;
+   padding-bottom:2em;
+}
+a{
+   color: #b4b4b4;
+   text-decoration: none;
+   box-shadow: inset 0 -4px #B95C5B;
+   transition:color .1s ease-out;
+}
+a:hover{
+   color: #B95C5B;
+}
+header{
+   /*text-align: center;*/
+}
+
+#logo{
+   margin-top:4em;
+   margin-bottom:6em;
+   text-align:center;
+   transform: rotate(-5deg) translateZ(3em);
+}
+   #square{
+      display: inline;
+      position: absolute;
+      height: 1.2em;
+      width: 1.2em;
+      left: calc(50% - .6em);
+      top: .15em;
+      /* right: 50%; */
+      background: #0732a2;
+      z-index: -1;
+   }
+   #logo h1{
+      display: inline;
+      letter-spacing: -2px;
+      position:relative;
+      line-height:normal;
+      font-size: 6em;
+      /* z-index: 100; */
+   }
+   #logo a{
+      box-shadow: none;
+   }
+
+h1{
+   font-size: 4em;
+   font-weight: 600;
+   font-style: italic;
+   margin-top: 1em;
+   line-height:.7em;
+}
+   h1 a{
+      color: #b95c5c;
+      border: none;
+   }
+
+h2{
+   font-family: "Helvetica", "Arial", sans-serif;
+   font-size: 2.5em;
+   font-weight: 600;
+}
+
+.card{
+   height:300px;
+   background: #0732a2;
+}
+.card .photo{
+   /*border:1px solid red;*/
+   /*display:inline;*/
+   width:300px;
+   float:left;
+   background: linear-gradient(
+      rgba(7, 50, 162, 0.3),
+      rgba(7, 50, 162, 0.3)
+      ),
+      url("massi.jpg") center / cover;
+}
+.card .photo:before{
+   content:"";
+   padding-top:100%;
+   display:inherit;
+}
+.card .info{
+   /*border:1px solid green;*/
+   display:inline-block;
+   height:300px;
+   line-height:3em;
+   margin-left:2em;
+}
+.card .info:before{
+   /*content:"";
+   padding-top:100%;
+   display:inherit;*/
+}
+.card .info h2{
+
+}
+.card .info h2:first-of-type{
+   margin-top:.6em;
+}
+
+aside{
+   position:fixed;
+   left:0px;
+   top:120px;
+   width:8%;
+}
+.dugged{
+   background: #0732a2;
+   width:100%;
+   /*height:20px;*/
+   margin-right: 1%;
+   /*float: left;*/
+   /*margin-top:1em;*/
+   margin-bottom:1em;
+}
+.dugged:before{
+   content:"";
+   padding-top:100%;
+   display:inherit;
+}
+
+#duggLine{
+   /*margin-left:300px;*/
+   /*position:absolute;*/
+   /*right:0;*/
+}
+.duggedLine{
+   background: #0732a2;
+   font-family: "Helvetica", "Arial", sans-serif;
+   font-size: 2.5em;
+   font-weight: 600;
+   /*width:19%;*/
+   padding:.1em .7em;
+   /*height:20px;*/
+   margin-left: 1%;
+   float: right;
+   /*margin-top:1em;*/
+   /*margin-bottom:1em;*/
+}
+/*.duggedLine:before{
+   content:"";
+   padding-top:50%;
+   display:inherit;
+}*/
+
+.duggedRight{
+   left: initial;
+   top: initial;
+   right: 0;
+   float: right;
+   position: relative;
+}
+.rightDuggs{
+   background: #0732a2;
+   font-family: "Helvetica", "Arial", sans-serif;
+   font-size: 2.5em;
+   font-weight: 600;
+   /*height:60px;*/
+   /*width:19%;*/
+   padding:10px .7em;
+   /*height:20px;*/
+   /*margin-left: 1%;*/
+   /*float: right;*/
+}
+.rightDuggs a{
+   box-shadow: none;
+}
+#up a{
+   font-family: monospace;
+   font-size: 1.4em;
+}
+#up li{
+   padding-left: .6em;
+   background: #B95C5B;
+}
+
+.writing{
+   clear:both;
+   width:800px;
+   margin: 0 auto;
+   font-family: Georgia, "Times New Roman", Times, serif;
+   letter-spacing: 0.01rem;
+   line-height: 1.5;
+   font-size: 1.4em;
+}
+.writing p{
+   padding-top:2em;
+}
