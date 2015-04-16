@@ -296,7 +296,7 @@ article p{
    content:'';
    padding-top: 20%;
 }
-#iphone-wrapper{
+#{
    background-image:url('imgs/pizza-logo.png');
    background-size: 100%;
    background-repeat: no-repeat;
@@ -424,7 +424,7 @@ textarea{
 input, textarea{
    background-color: rgba(0, 0, 255, 0);
    border: none;
-   
+
    border-radius: 4px;
    box-sizing: border-box;
    width: 100%;
@@ -438,7 +438,7 @@ input, textarea{
    max-width: 20em;
    padding-right: .3em;
    padding-top: .3em;
-   border: 1px solid rgba(0, 0, 255, 0); 
+   border: 1px solid rgba(0, 0, 255, 0);
    border-bottom: 1px solid rgba(0, 0, 255, 0.3);
    padding-bottom: .1em;
    -webkit-transition: all .2s;
@@ -499,7 +499,7 @@ button{
    }
 }
 
-@media (max-width:400px){
+@media (max-width:414px){
    #iphone-wrapper{
       height:100vh;
       margin-top: 0;
