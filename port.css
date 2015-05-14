@@ -55,7 +55,7 @@ body{
    padding-top: 0;
 }
 .grid{
-   background:url('imgs/back.png') fixed white;
+   background:url('imgs/back.png') white;
    text-align:center;
    box-shadow: inset 0px 10px 30px 0px rgba(0,0,0,.30);
    padding: 1em 0;
@@ -300,20 +300,21 @@ article p{
    content:'';
    padding-top: 20%;
 }
-#{
-   background-image:url('imgs/pizza-logo.png');
-   background-size: 100%;
-   background-repeat: no-repeat;
-   margin: 0 auto;
-   width:60%;
-   max-width:600px;
-   min-width: 330px;
-   margin-top:1em;
+#iphone-wrapper {
+  background-image: url('imgs/pizza-logo.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* text-align: center; */
+  margin: 0 auto;
+  width: 60%;
+  max-width: 600px;
+  min-width: 330px;
+  margin-top: 1em;
 }
-#iphone-wrapper:before{
-   content: '';
-   display: block;
-   padding-top: 25%;
+#iphone-wrapper:before {
+  content: '';
+  display: block;
+  padding-top: 25%;
 }
 #iphone{
    background-image: url('imgs/iphone.png');
