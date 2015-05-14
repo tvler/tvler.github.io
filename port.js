@@ -1,5 +1,3 @@
-var i;
-
 window.onload = function(){
    i = document.getElementById('next-proj');
    i.addEventListener("mouseenter", showName);
@@ -12,4 +10,3 @@ function showName(e) {
 function hideName(e) {
    (e.srcElement || e.target).nextElementSibling.classList.remove('show-name');
 }
-
