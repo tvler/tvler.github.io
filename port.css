@@ -266,6 +266,7 @@ article p{
 }
 #project-desc .date{
    font-size: 1em;
+   margin-top: 1.5em;
 }
 .photo{
    background:blue;
