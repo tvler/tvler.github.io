@@ -94,6 +94,12 @@ header a i{
 .single-job{
    margin-top:.5em !important;
 }
+.date{
+   text-transform: uppercase;
+   width: 6.5em;
+   font-size: .9em;
+   color: rgba(68, 68, 68, 0.7);
+}
 .tech-skills{
    text-transform: none !important;
    width: 8.1em !important;
@@ -241,7 +247,7 @@ a[target="_blank"]{
    opacity: 1;
 }
 article, footer{
-   margin-top: .5em;
+   margin-top: .8em;
    display: table;
    padding-top: 0 !important;
 }
@@ -250,11 +256,6 @@ article:first-of-type {
 }
 article p{
    display: table-cell;
-}
-.date{
-   text-transform: uppercase;
-   width: 6.5em;
-   font-size: .9em;
 }
 #project-desc .date:before{
    font-family: 'FontAwesome';
