@@ -97,7 +97,7 @@ header a i{
 }
 .date{
    text-transform: uppercase;
-   width: 6.3em;
+   width: 6.1em;
    font-size: .9em;
    color: rgba(68, 68, 68, 0.7);
 }
@@ -113,7 +113,7 @@ header a i{
 }
 .wrapper>article, footer{
    margin-bottom:2em;
-   padding: .4em;
+   padding: .7em;
 }
 h2{
    font-size: 1.2em;
