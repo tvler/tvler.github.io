@@ -161,13 +161,13 @@ a[target="_blank"]{
 }
 .right-resume:before{
    font-family: 'FontAwesome';
-   font-size: .9em;
+   font-size: .8em;
    line-height: 0;
    content: "\f178";
    color: rgba(68, 68, 68, 0.7);
 }
 .right-resume{
-   margin-left: -19px;
+   margin-left: -15px;
 }
 .right-job:before{
    font-family: 'FontAwesome';
