@@ -26,7 +26,7 @@ body{
 .wrapper{
    max-width:800px;
    margin: 0 auto;
-   padding:0 2%;
+   padding:0 7px;
 }
 .wrapper>article{
    padding-top: 0;
@@ -36,7 +36,7 @@ body{
    text-align:center;
    box-shadow: inset 0px 10px 30px 0px rgba(0,0,0,.30);
    padding: 1em 0;
-   margin-top: 3em;
+   margin-top: 2em;
 }
 .i-wrap{
    position: relative;
@@ -157,9 +157,10 @@ a[target="_blank"]{
    font-size: .9em;
    line-height: 0;
    content: "\f178";
-   margin-left: -1.5em;
-   margin-right: -.1em;
    color: rgba(68, 68, 68, 0.7);
+}
+.right-resume{
+   margin-left: -19px;
 }
 .right-job:before{
    font-family: 'FontAwesome';
@@ -455,7 +456,7 @@ button{
       padding:1em 0;
    }
    header{
-      margin-top:2%;
+      margin-top:7px;
    }
 }
 
