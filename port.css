@@ -35,9 +35,10 @@ body{
    text-align:center;
    padding: 1em 0;
    margin-top: 2em;
-   box-shadow:0px 0px 40px -9px rgba(0, 0, 255, 0.1);
+   /*box-shadow:0px 0px 40px -9px rgba(0, 0, 255, 0.1);*/
    background-color: rgba(235, 235, 235, 1);
-   border-top: 1px solid rgba(0, 0, 255, 0.3);
+   /*border-top: 1px solid rgba(0, 0, 255, 0.3);*/
+   box-shadow: inset 0px 90px 34px -90px rgba(0,0,0,.30);
 }
 .i-wrap{
    position: relative;
