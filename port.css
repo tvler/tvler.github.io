@@ -97,8 +97,9 @@ header a i{
 }
 .date{
    text-transform: uppercase;
-   width: 6.1em;
-   font-size: .9em;
+   width: 5.8em;
+   letter-spacing: -.03em;
+   font-size: .83em;
    color: rgba(68, 68, 68, 0.7);
 }
 .tech-skills{
@@ -113,7 +114,7 @@ header a i{
 }
 .wrapper>article, footer{
    margin-bottom:2em;
-   padding: .7em;
+   padding: .4em;
 }
 h2{
    font-size: 1.2em;
@@ -167,7 +168,7 @@ a[target="_blank"]{
    color: rgba(68, 68, 68, 0.7);
 }
 .right-resume{
-   margin-left: -15px;
+     margin-left: -13px;
 }
 .right-job:before{
    font-family: 'FontAwesome';
@@ -288,10 +289,16 @@ article p{
   background-repeat: no-repeat;
   /* text-align: center; */
   margin: 0 auto;
-  width: 60%;
+  /*width: 60%;*/
   max-width: 600px;
   min-width: 330px;
   margin-top: 1em;
+  display: inline-block;
+
+  /*width: 40vw;*/
+  min-width: 310px;
+  padding: 1em;
+  max-width: 700px;
 }
 #iphone-wrapper:before {
   content: '';
@@ -316,6 +323,7 @@ article p{
    width: calc(102% + 1px);
    height: calc(100% * 304 / 409);
    top:0;
+   left:0;
    margin-top:40%;
    margin-left: 6.5%;
 
@@ -330,6 +338,48 @@ article p{
    -webkit-transform-origin: 0 0;
    transform-origin: 0 0;
 }
+.pizza-icons svg{
+   /*transform: translateZ(12px) rotateX(-2deg);*/
+   /*transform-origin: top;*/
+}
+.row{
+   position: relative;
+   display: table;
+   width: 80vw;
+   margin: 0 auto;
+   /*perspective: 300px;*/
+   /*perspective-origin: center;*/
+}
+.pizza-icons{
+   display: inline-block;
+   /*perspective-origin: left;*/
+   width: 40vw;
+   /*perspective: 20px;*/
+   vertical-align: top;
+   min-width: 310px;
+   max-width: 1500px;
+   text-align: left;
+   border: 1px solid;
+   border-radius: 100%;
+   /*transform: rotateX(40deg);*/
+   box-shadow: 0px 0px 40px -9px rgba(0, 0, 255, 0.75);
+   position: relative;
+   background-color: rgba(235, 235, 235, 1);
+   /*transform-origin: bottom;*/
+   margin: 0 auto;
+}
+/*.pizza-icons>:nth-child(5) {
+   padding-right: 10%;
+}
+.pizza-icons>:nth-child(3) {
+   padding-right: 20%;
+}
+.pizza-icons>:nth-child(1) {
+   padding-right: 30%;
+}*/
+/*.pizza-icons>:nth-child(1) {
+   padding-left: 60%;
+}*/
 .nav-projects{
    position: absolute;
    top: 0;
