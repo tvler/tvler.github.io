@@ -34,11 +34,33 @@ body{
 .grid{
    text-align:center;
    padding: 1em 0;
-   margin-top: 2em;
+   margin-top: 3em;
    /*box-shadow:0px 0px 40px -9px rgba(0, 0, 255, 0.1);*/
-   background-color: rgba(235, 235, 235, 1);
+   /*background-color: rgba(235, 235, 235, 1);*/
+   background: white;
    /*border-top: 1px solid rgba(0, 0, 255, 0.3);*/
-   box-shadow: inset 0px 90px 34px -90px rgba(0,0,0,.30);
+   box-shadow: inset 0px 90px 34px -90px rgba(0,0,0,.45);
+}
+.proj-card{
+   border: 1px solid rgba(0, 0, 255, 0.3);
+   margin-top: 2em;
+   margin-bottom: 3em !important;
+   box-shadow: 0px 0px 40px -9px rgba(0, 0, 0, 0.4);
+   position: relative;
+   background-color: rgba(235, 235, 235, 1);
+   padding: 1.3em;
+   text-align: left;
+   max-width: 800px;
+   box-sizing:border-box;
+   margin-left: auto;
+   margin-right: auto;
+   /*padding: 2em calc(7px + .4em);*/
+}
+.proj-card > h2, .proj-card > .date{
+   display: inline-block;
+}
+.proj-card > h2{
+   padding-right: 20px;
 }
 .i-wrap{
    position: relative;
@@ -64,7 +86,7 @@ body{
    max-width: 700px;
 }
 .grid a{
-   background-image: none;
+   /*background-image: none;*/
 }
 header{
    border:1px solid rgba(0, 0, 255, 0.3);
@@ -125,7 +147,7 @@ h2{
 footer h2{
    font-size: 1em;
 }
-header>p, address{
+header>p, nav{
    margin-top:.8em;
 }
 a{
