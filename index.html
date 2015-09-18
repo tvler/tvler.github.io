@@ -18,7 +18,7 @@
       </header>
 
       <p>Professional Developer And Designer Of Nice Work</p>
-      <p>In San Luis Obispo, California</p>
+      <p>In Brooklyn, ny</p>
       <p>
          <a href="https://bandcamp.com/beyblader365">Music</a>, 
          <a href="http://digg.com/user/3d9a2575c912414a9e9651ec5dc0473a/diggs.rss">Diggs</a>, 
@@ -320,7 +320,7 @@
       <p><em>iPhone template by <a href="http://blixt.io/">Blixt</a></em></p>
       <p><em>Typeset in <a href="https://pilgrimfonts.com/peak/">Peak</a> by <a href="http://okgriffin.com/">Griffin Moore</a></em></p>
       <p><em>Programing and design done mostly <a href="https://www.google.com/maps/d/viewer?mid=zWfeQQe_j7bg.kwtnn9Rtch-Q">here</a></em></p>
-      <p><em><a id="art-button">Art Mode</a></em></p>
+      <p><em><i style="color:rgba(68, 68, 68, 0.7)"><a id="art-button">Art Mode</a></i>(?)</em></p>
    </section>
    
    <script>
@@ -347,24 +347,30 @@
          scroll = window.scrollY;
          anims = document.querySelectorAll('.anim iframe');
 
-         for(var i=0; i<anims.length; i++){
-            for(var temp = anims[i], height = temp.offsetHeight, fromTop = 0; temp !== null; fromTop += temp.offsetTop, temp = temp.offsetParent){}
-            // console.log(fromTop + height - window.innerHeight);
-            // console.log(fromTop);
-            heights[i] = [fromTop + height - window.innerHeight, fromTop];
-            hasAnim[i] = false;
-         }
+         getAnimHeights();
 
          document.getElementById('art-button').onclick = artClicked;
 
          artHash();
       });
 
+      window.onresize = getAnimHeights;
+
       titleText = document.querySelector('.title p').innerHTML;
+
+     function getAnimHeights(){
+        console.log('getting heights');
+        for(var i=0; i<anims.length; i++){
+           for(var temp = anims[i], height = temp.offsetHeight, fromTop = 0; temp !== null; fromTop += temp.offsetTop, temp = temp.offsetParent){}
+           // console.log(fromTop + height - window.innerHeight);
+           // console.log(fromTop);
+           heights[i] = [fromTop + .35*height - window.innerHeight, fromTop + .65*height];
+           // hasAnim[i] = false;
+        }
+     }
 
      function artHash(){
          // console.log(medias);
-
          if(window.location.hash === '#art'){
             // console.log(window.location);
             history.pushState('', document.title, window.location.pathname);
@@ -384,7 +390,7 @@
             if(!hasAnim[i]){
                if(scroll>heights[i][0] && scroll<heights[i][1]){
                   hasAnim[i] = true;
-                  // console.log('animating!!!!!');
+                  console.log('animating!!!!!');
                   // console.log(anims[i].src);
                   anims[i].src += '#start';
                   // console.log(anims[i].src);
@@ -413,7 +419,7 @@
             medias[i].style.opacity = m;
             medias[i].parentElement.firstElementChild.style.opacity = b;
          }
-         for(var ems = document.querySelectorAll('em'), i = 0; i<ems.length - 1; i++){
+         for(var ems = document.querySelectorAll('em'), i = 0; i<ems.length; i++){
             ems[i].style.color = c;
          }
          artShown = !artShown;
