@@ -132,6 +132,8 @@
             class="media exh-space anim" 
             data-elem="iframe" 
             data-src="/exh/1.html"
+            data-fall="/imgs/exh12.png"
+            data-fall-alt="exhibit space card"
             >
                <div class="holder"></div>
                <noscript><img src="/imgs/exh12.png" alt="exhibit space card"></noscript>
@@ -140,6 +142,8 @@
             class="media exh-space anim" 
             data-elem="iframe" 
             data-src="/exh/2.html"
+            data-fall="/imgs/exh13.png"
+            data-fall-alt="exhibit space card"
             >
                <div class="holder"></div>
                <noscript><img src="/imgs/exh13.png" alt="exhibit space card"></noscript>
@@ -324,25 +328,40 @@
    </section>
    
    <script>
-      var scroll, anims, heights = [], hasAnim = [], medias = [], artShown = false, titleText;
+      var scroll, anims, heights = [], hasAnim = [], medias = [], artShown = false, titleText, winWid = window.innerWidth, fallBackWidth = 440, fallenBack, fallbacks = [];
 
       document.addEventListener("DOMContentLoaded", function() {
          for(var i=0, unloaded = document.querySelectorAll('.media'), media, parent, alttext, img; i<unloaded.length;){
-            (media = (parent = unloaded[i++]).appendChild(document.createElement(parent.getAttribute('data-elem')))).onload = (function(){
+            parent = unloaded[i++];
+            if(winWid <= fallBackWidth && parent.getAttribute('data-fall')){
+               fallenBack = true;
+               media = document.createElement('img');
+               media.src = parent.getAttribute('data-fall');
+               // console.log(parent.getAttribute('data-fall'));
+               media.alt = parent.getAttribute('data-fall-alt');
+               media.classList.add('fall');
+               fallbacks.push(media);
+            }
+            else{
+               media = document.createElement(parent.getAttribute('data-elem'));
+               if(parent.getAttribute('data-elem') === 'object'){
+                  media.data = parent.getAttribute('data-src');
+                  media.type = 'image/svg+xml';
+               }
+               else{
+                  media.src = parent.getAttribute('data-src');
+                  if(alttext = parent.getAttribute('data-alt')) media.alt = alttext;
+               }
+            }
+            media.onload = (function(){
                if(!artShown){
                   this.style.opacity = '1';
                   this.parentElement.firstElementChild.style.opacity = '0';
                }
             });
-            if(parent.getAttribute('data-elem') === 'object'){
-               media.data = parent.getAttribute('data-src');
-               media.type = 'image/svg+xml';
-            }
-            else{
-               media.src = parent.getAttribute('data-src');
-               if(alttext = parent.getAttribute('data-alt')) media.alt = alttext;
-            }
+           
             medias.push(media);
+            parent.appendChild(media);
          } 
          scroll = window.scrollY;
          anims = document.querySelectorAll('.anim iframe');
@@ -354,12 +373,46 @@
          artHash();
       });
 
-      window.onresize = getAnimHeights;
+      window.onresize = (function(){
+         getAnimHeights();
+
+         if(fallenBack && window.innerWidth > fallBackWidth){
+            fallenBack = false;
+            for(var i=0, parent, media; i<fallbacks.length; i++){
+               parent = fallbacks[i].parentElement;
+               media = document.createElement(parent.getAttribute('data-elem'));
+               if(parent.getAttribute('data-elem') === 'object'){
+                  media.data = parent.getAttribute('data-src');
+                  media.type = 'image/svg+xml';
+               }
+               else{
+                  media.src = parent.getAttribute('data-src');
+                  if(alttext = parent.getAttribute('data-alt')) media.alt = alttext;
+               }
+               media.onload = (function(){
+                  if(!artShown){
+                     this.style.opacity = '1';
+                     this.parentElement.firstElementChild.style.opacity = '0';
+                  }
+               });
+
+               medias.push(media);
+               parent.appendChild(media);
+               fallbacks[i].style.display = 'none';
+
+               anims = document.querySelectorAll('.anim iframe');
+
+               getAnimHeights();
+
+               window.onscroll();
+            }
+         }
+      })
 
       titleText = document.querySelector('.title p').innerHTML;
 
      function getAnimHeights(){
-        console.log('getting heights');
+        // console.log('getting heights');
         for(var i=0; i<anims.length; i++){
            for(var temp = anims[i], height = temp.offsetHeight, fromTop = 0; temp !== null; fromTop += temp.offsetTop, temp = temp.offsetParent){}
            // console.log(fromTop + height - window.innerHeight);
@@ -390,7 +443,7 @@
             if(!hasAnim[i]){
                if(scroll>heights[i][0] && scroll<heights[i][1]){
                   hasAnim[i] = true;
-                  console.log('animating!!!!!');
+                  // console.log('animating!!!!!');
                   // console.log(anims[i].src);
                   anims[i].src += '#start';
                   // console.log(anims[i].src);

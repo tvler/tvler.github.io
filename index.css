@@ -407,7 +407,7 @@ figure figure:not(:first-child){
 #line svg{
    width: 5%;
    max-width: 60px;
-   min-width: 30px;
+   min-width: 20px;
    height: 100%;
    margin: 0 auto;
 }
@@ -435,6 +435,9 @@ figure figure:not(:first-child){
    margin: 0 auto;
    height: 100%;
    width: 100%;
+}
+.fall{
+   object-fit:initial;
 }
 
 /*
@@ -472,7 +475,7 @@ figure figure:not(:first-child){
       -webkit-transform: scale(.9);
           -ms-transform: scale(.9);
               transform: scale(.9);
-      margin-left: calc(50% - 405px);
+      margin-left: calc(50% - 400px);
    }
    .pizza-phone{
       margin-left: calc(50% - 450px);
@@ -488,6 +491,11 @@ figure figure:not(:first-child){
       -webkit-transform: scale(.8);
           -ms-transform: scale(.8);
               transform: scale(.8);
+      margin-top: -6em;
+      margin-bottom: -4em;
+   }
+   .exh-space + .exh-space{
+      margin-bottom: -6em;
    }
 }
 @media (max-width:855px){
@@ -516,9 +524,11 @@ figure figure:not(:first-child){
       -webkit-transform: scale(.7);
           -ms-transform: scale(.7);
               transform: scale(.7);
+      margin-top: -8em;
+      margin-bottom: -7em;
    }
-   .exh-space + .exh-space{
-      margin-top: -1em;
+   .exh-space + .exh-space {
+       margin-bottom: -8em;
    }
 }
 @media (max-width:650px){
@@ -575,11 +585,11 @@ figure figure:not(:first-child){
       -webkit-transform: scale(.6);
           -ms-transform: scale(.6);
               transform: scale(.6);
-      margin-top: -4em;
+      margin-top: -10em;
+      margin-bottom: -10em;
    }
-   .exh-space + .exh-space{
-      margin-top: -3em;
-      margin-bottom: -4em;
+   .exh-space + .exh-space {
+       margin-bottom: -10em;
    }
 }
 @media (max-width:560px){
@@ -589,17 +599,18 @@ figure figure:not(:first-child){
          -webkit-transform: scale(.5);
              -ms-transform: scale(.5);
                  transform: scale(.5);
+   }
 }
 @media (max-width:510px){
    .exh-space{
-      -webkit-transform: scale(.38);
-          -ms-transform: scale(.38);
-              transform: scale(.38);
-      margin-top: -7em;
+      -webkit-transform: scale(.5);
+          -ms-transform: scale(.5);
+              transform: scale(.5);
+      margin-top: -13em;
+      margin-bottom: -13em;
    }
-   .exh-space + .exh-space{
-      margin-top: -8em;
-      margin-bottom: -8em;
+   .exh-space + .exh-space {
+       margin-bottom: -13em;
    }
 }
 @media (max-width:470px){
@@ -609,11 +620,22 @@ figure figure:not(:first-child){
          -webkit-transform: scale(.4);
              -ms-transform: scale(.4);
                  transform: scale(.4);
+   }
 }
 
 @media (max-width:440px){
    .post-page{
       margin-left: -40%;
+   }
+   .exh-space{
+      -webkit-transform: scale(.36);
+          -ms-transform: scale(.36);
+              transform: scale(.36);
+      margin-top: -16em;
+      margin-bottom: -16em;
+   }
+   .exh-space + .exh-space {
+       margin-bottom: -16em;
    }
 }
 
@@ -624,4 +646,5 @@ figure figure:not(:first-child){
          -webkit-transform: scale(.335);
              -ms-transform: scale(.335);
                  transform: scale(.335);
+   }
 }
