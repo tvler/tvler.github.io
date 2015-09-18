@@ -32,6 +32,15 @@
 
    <script src='exh.js' type='text/javascript'></script>
    <script>
+   function an(){
+      fc1.removeEventListener(anim, an);
+      window.setTimeout(function(){
+         if(!hasStarted){
+            fc1.click();
+         }
+      }, 400);
+      // console.log('animing');
+   }
    function start(){
       // console.log('in here');
       if(!hasStarted){
@@ -39,12 +48,13 @@
          descStyle.willChange = 'transform';
          slideStyle.willChange = 'transform';
          fc1.addEventListener(trans, hasOpened);
-         window.setTimeout(function(){
-            // console.log('K');
-            if(!hasStarted){
-               fc1.click();
-            }
-         }, 1000);
+         // window.setTimeout(function(){
+         //    // console.log('K');
+         //    if(!hasStarted){
+         //       fc1.click();
+         //    }
+         // }, 1000);
+         fc1.addEventListener(anim, an);
       }
    }
    </script>

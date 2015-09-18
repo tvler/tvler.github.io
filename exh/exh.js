@@ -1,4 +1,4 @@
-var desc, slide, slidePhotos, hidden = false, hasStarted = false, fc1, fc2, fc1Style, fc2Style, descStyle, slideStyle, loaded = false;
+var desc, slide, slidePhotos, hidden = false, hasStarted = false, fc1, fc2, fc1Style, fc2Style, descStyle, slideStyle, loaded = false, hasFinishedGlowing = false;
 var trans = ('transition' in document.documentElement.style) ? 'transitionend' : 'webkitTransitionEnd';
 var anim = ('animation' in document.documentElement.style) ? 'animationend' : 'webkitAnimationEnd';
 
@@ -84,18 +84,6 @@ function removeChange(ev){
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-
-});
-
-function setFC1(){
-   hasStarted = true;
-   fc1.addEventListener(trans, hasOpened);
-   fc1.classList.add('clicked');
-   toggle();
-}
-
-window.onload = (function(){
-
    desc = document.querySelector('.spot-desc-wrapper');
    descStyle = desc.style;
    fc1 = document.querySelector('#fc1');
@@ -110,18 +98,35 @@ window.onload = (function(){
    slideStyle = slide.style;
    slidePhotos = slide.children;
 
-   fc1.addEventListener("click", setFC1);
-   fc2.addEventListener("click", function(event){
+
+
+
+   fc1.onclick = setFC1;
+   fc2.onclick = function(event){
       hasStarted = true;
       fc2.addEventListener(trans, hasClosed);
       fc2.classList.add('clicked');
       toggle();
-   });  
+   }  
+});
 
+function setFC1(){
+   hasStarted = true;
+   fc1.addEventListener(trans, hasOpened);
+   fc1.classList.add('clicked');
+   toggle();
+}
+
+window.onload = (function(){
+
+
+
+   loaded = true;
+   prep();
    // window.setTimeout(function(){
-      loaded = true;
+      // loaded = true;
       // console.log('ok');
-      prep();
+      // prep();
    // }, 500);
 });
 
