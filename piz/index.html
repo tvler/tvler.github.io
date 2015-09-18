@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>🍕</title>
+   <style>
+      html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0;box-sizing:border-box;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+      #wrap{
+         height: 811px;
+         position: relative;
+         width: 989px;
+         overflow: hidden;
+      }
+
+      #the-phone{
+         background: url('/imgs/pizza5.png') no-repeat top left / 100% auto;
+         width: 900px;
+         height: 547.09px;
+         position:absolute;
+         bottom:0;
+         left:0;
+      }
+      #iso{
+         position: absolute;
+         top: -12px;
+         left: 315px;
+         width: 275px;
+         height: 542px;
+         -webkit-transition: 1s -webkit-transform;
+         transition: 1s transform;
+         -webkit-transform: rotate(45deg) skew(-15deg, -15deg);
+         transform: rotate(45deg) skew(-15deg, -15deg);
+         background: url('/imgs/pizza2.png') top left / 100% auto;
+         border-radius: 6px;
+         -webkit-perspective: 3000px;
+         perspective: 3000px;
+         -webkit-perspective-origin: 1000% 456%;
+         perspective-origin: 1000% 456%;
+      }
+      #lid{
+         -webkit-transition: .4s -webkit-transform;
+         transition: .4s transform;
+         -webkit-transform-origin: top center;
+         transform-origin: top center;
+         -webkit-transform-style:preserve-3d;
+         transform-style:preserve-3d;
+         -webkit-transition-delay: .13s;
+         transition-delay: .13s;
+      }
+      .lid-pic{
+         width: 100%;
+         position:absolute;
+         top:0;
+         left:0;
+      }
+      #front-lid{
+         position:absolute;
+         overflow:hidden;
+         width:275px;
+         height:275px;
+         -webkit-backface-visibility: hidden;
+         backface-visibility: hidden;
+         -webkit-transform-style:preserve-3d;
+         transform-style:preserve-3d;
+      }
+      #front-lid img{
+         -webkit-backface-visibility: hidden;
+         backface-visibility:hidden;
+         width:100%;
+      }
+      #under-lid{
+         width: 275px;
+         height: 275px;
+         overflow: hidden;
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index:-1;
+      }
+      #fc1{
+         right: 9px;
+         top: 7px;
+      }
+      #fc2{
+         right: 9px;
+         top: 7px;
+      }
+      .finger-click{
+         position: absolute;
+         width: 30px;
+         height: 30px;
+         background-color: rgba(255, 255, 255, 0.4);
+         border-radius: 100%;
+         box-shadow: 0px 0px 11px 4px rgba(255, 255, 255, 0.8);
+         display: none;
+         -webkit-animation-iteration-count: 1;
+         -webkit-animation-duration: .3s;
+         -webkit-animation-name: grow;
+         animation-iteration-count: 1;
+         animation-duration: .3s;
+         animation-name: grow;
+         cursor: pointer;
+         -webkit-transition: -webkit-transform 0.3s, opacity .3s;
+         transition: transform 0.3s, opacity .3s;
+      }
+      .flipped{
+         -webkit-transform: rotateX(130deg);
+         transform: rotateX(130deg);
+      }
+      .clicked{
+         -webkit-transform: scale(24); 
+         transform: scale(24); 
+         opacity: .1;
+      }
+      @-webkit-keyframes grow{
+         from {opacity: 0; -webkit-transform: scale(.7);}
+         to {opacity: 1; -webkit-transform: scale(1);}
+      }
+      @keyframes grow{
+         from {opacity: 0; transform: scale(.7);}
+         to {opacity: 1; transform: scale(1);}
+      }
+   </style>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+   <div id="wrap">
+      <div id="the-phone">
+         <div id="iso">
+            <div id="lid">
+               <img src="/imgs/pizza7.png" class="lid-pic">
+               <div id="front-lid">
+                  <img src="/imgs/pizza6.png">
+                  <div class="finger-click" id="fc2"></div>
+               </div>
+            </div>
+            <div id="under-lid">
+               <div class="finger-click" id="fc1"></div>
+            </div>
+         </div> 
+      </div>
+   </div>
+
+   <script>
+   var trans = ('transition' in document.documentElement.style) ? 'transitionend' : 'webkitTransitionEnd';
+
+   var lid = document.getElementById('lid'),
+       lidClassList = lid.classList,
+       fc1 = document.getElementById('fc1'),
+       fc2 = document.getElementById('fc2'),
+       flipped = false,
+       flipping = true,
+       otherEV,
+       hasStarted = false,
+       loaded = false;
+
+   function hasOpened(e){
+      // console.log('hasOpened');
+      flippy(e, fc2, fc1, hasOpened, hasClosed);
+   }
+   function hasClosed(e){
+      // console.log('hasClosed');
+      flippy(e, fc1, fc2, hasClosed, hasOpened);
+   }
+
+   function flippy(ev, butt1, butt2, thisEV, othEV){
+      ev.stopPropagation();
+      if(ev.target === lid){
+         otherEV = othEV;
+         // console.log('in flippy');
+         flipping = false;
+         lid.removeEventListener(trans, thisEV);
+         butt1.classList.remove('clicked');
+         butt1.style.cssText = 'display:none';
+         butt2.style.display = 'initial';
+      }
+   }
+
+   function clickFlip(){
+      hasStarted = true;
+      if(!flipping){
+         flipping = true;
+         lid.addEventListener(trans, otherEV);
+         this.classList.add('clicked');
+         if(flipped){
+            lidClassList.remove('flipped');
+            flipped = false;
+            // console.log('closing');
+         }
+         else{
+            lidClassList.add('flipped');
+            flipped = true;
+            // console.log('opening');
+         }
+      }
+   }
+
+   function changing(){
+      // console.log('here');
+      this.style.willChange = 'transform, opacity';
+      this.setAttribute('data-flipped', flipped);
+   }
+
+   function unchange(){
+      if(this.getAttribute('data-flipped') === flipped.toString()){
+         // console.log('unchanging');   
+         this.style.willChange = '';
+      }
+      // else console.log('NOT UNCHANGING!!!');
+   }
+
+   function setEvs(elem){
+      elem.onclick = clickFlip;
+      elem.onmouseenter = changing;
+      elem.onmouseleave = unchange;
+   }
+   setEvs(fc1);
+   setEvs(fc2);
+
+   window.onload = (function(){
+      // console.log('onload');
+      window.setTimeout(function(){
+         loaded = true;
+         // console.log('ok');
+         prep();
+      }, 1000);
+   });
+
+   window.onhashchange = (function(){
+      // console.log('hashchange');
+      // console.log(window.location.hash);
+      prep();
+   });
+
+   function prep(){
+      // console.log('preppin pizza');
+      if(window.location.hash && loaded) start();
+   }
+
+   function start(){
+      console.log('?');
+      flipping = false;
+      fc2.style.cssText = 'display:initial;will-change:transform, opacity';
+      lid.addEventListener(trans, hasOpened);
+      window.setTimeout(function(){
+         if(!hasStarted){
+            fc2.onclick();
+         }
+      }, 500);
+   }
+   </script>
+</body>
+</html>
