@@ -31,7 +31,7 @@ function toggle(){
 
 function hasOpened(ev){
    if(ev.propertyName === 'opacity'){
-      console.log('hasopened');
+      // console.log('hasopened');
       // console.log(ev);
       fc1Style.cssText = '';
       fc1.classList.remove('clicked');
