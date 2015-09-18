@@ -11,8 +11,8 @@ section{
    background: #e2e2e2;
 }
 section:nth-child(even) {background: #ffffff;}
-section:first-child .pad-top {background:none;}
-section:first-child .pad-bot {box-shadow:none;}
+section:first-child header:before {background:none;}
+section:first-child header:after {box-shadow:none;}
 
 /*
  * ---
@@ -90,23 +90,29 @@ header > .title{
 }
 section:nth-child(even) header > .title {background: white}
 
-.pad{
+header:before{
    position: absolute;
    height: 50%;
    width: 100%;
    z-index: -1;
-}
-
-.pad-top{
+   content: '';
    bottom:50%;
    background: white;
+   display: block;
 }
-section:nth-child(even) .pad-top {background: #e2e2e2}
 
-.pad-bot{
+section:nth-child(even) header:before {background: #e2e2e2}
+
+header:after{
+   position: absolute;
+   height: 50%;
+   width: 100%;
+   z-index: -1;
+   content: '';
    top:50%;
    background: inherit;
    box-shadow: inset 0px 90px 34px -90px rgba(0,0,0,.45);
+   display: block;
 }
 
 .title{
@@ -384,7 +390,7 @@ figure figure:not(:first-child){
 #line-strike:after{
    content: '';
    display: block;
-   padding-bottom: 8em;
+   padding-bottom: 14em;
 }
 #line{
    width:100%; 
