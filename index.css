@@ -123,6 +123,10 @@ header:after{
    position: relative;
 }
 
+.title em{
+   vertical-align: middle;
+}
+
 #footer{
    padding-bottom: 1em;
    text-align: center;
