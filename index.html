@@ -317,18 +317,22 @@
       
       <h3><em>OK done.</em></h3>
       <p><em>Hosted on <a href="https://github.com/tvler/tvler.github.io">GitHub</a></em></p>
+      <p><em>iPhone template by <a href="http://blixt.io/">Blixt</a></a></em></p>
       <p><em>Typeset in <a href="https://pilgrimfonts.com/peak/">Peak</a> by <a href="http://okgriffin.com/">Griffin Moore</a></em></p>
-      <p><em>Programing and design done mostly <a href="https://www.google.com/maps/@35.300154,-120.658175,3a,75y,291h,90t/data=!3m4!1e1!3m2!1sJOthz_oUKyl63ZAfB3esew!2e0">here</a></em></p>
+      <p><em>Programing and design done mostly <a href="https://www.google.com/maps/d/viewer?mid=zWfeQQe_j7bg.kwtnn9Rtch-Q">here</a></em></p>
+      <p><em><a id="art-button">Art Mode</a></em></p>
    </section>
    
    <script>
-      var scroll, anims, heights = [], hasAnim = [];
+      var scroll, anims, heights = [], hasAnim = [], medias = [], artShown = false, titleText;
 
       document.addEventListener("DOMContentLoaded", function() {
          for(var i=0, unloaded = document.querySelectorAll('.media'), media, parent, alttext, img; i<unloaded.length;){
             (media = (parent = unloaded[i++]).appendChild(document.createElement(parent.getAttribute('data-elem')))).onload = (function(){
-               this.style.opacity = '1';
-               this.parentElement.firstElementChild.style.opacity = '0';
+               if(!artShown){
+                  this.style.opacity = '1';
+                  this.parentElement.firstElementChild.style.opacity = '0';
+               }
             });
             if(parent.getAttribute('data-elem') === 'object'){
                media.data = parent.getAttribute('data-src');
@@ -338,6 +342,7 @@
                media.src = parent.getAttribute('data-src');
                if(alttext = parent.getAttribute('data-alt')) media.alt = alttext;
             }
+            medias.push(media);
          } 
          scroll = window.scrollY;
          anims = document.querySelectorAll('.anim iframe');
@@ -349,7 +354,29 @@
             heights[i] = [fromTop + height - window.innerHeight, fromTop];
             hasAnim[i] = false;
          }
+
+         document.getElementById('art-button').onclick = artClicked;
+
+         artHash();
       });
+
+      titleText = document.querySelector('.title p').innerHTML;
+
+     function artHash(){
+         // console.log(medias);
+
+         if(window.location.hash === '#art'){
+            // console.log(window.location);
+            history.pushState('', document.title, window.location.pathname);
+            artClicked();
+         }
+      }
+
+      window.onhashchange = (function(){
+         // console.log('event');
+         artHash();
+      });
+
 
       window.onscroll = function(){
          scroll = window.scrollY;
@@ -364,6 +391,32 @@
                }
             }
          }
+      }
+
+      function artClicked(){
+         if(artShown){
+            artMode('1', '0', 'rgba(68, 68, 68, 0.7)');
+            document.querySelector('body').style.color = '#444';
+            document.querySelector('.title p').innerHTML = titleText;
+         }
+         else{
+            artMode('0', '1', 'rgba(0, 0, 0, 0)');
+            document.querySelector('body').style.color = 'rgba(0, 0, 0, 0)';
+            document.querySelector('.title p').innerHTML += "<i style='color:#444;'>, <a id='remove'>remove art</a></i>";
+            document.getElementById('remove').onclick = artClicked;
+         }
+      }
+
+      function artMode(m, b, c){
+         for(var i=0; i<medias.length; i++){
+            // console.log('meddling');
+            medias[i].style.opacity = m;
+            medias[i].parentElement.firstElementChild.style.opacity = b;
+         }
+         for(var ems = document.querySelectorAll('em'), i = 0; i<ems.length - 1; i++){
+            ems[i].style.color = c;
+         }
+         artShown = !artShown;
       }
    </script>
 </body>
