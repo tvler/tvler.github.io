@@ -5,6 +5,7 @@
    <title>Tyler Deitz</title>
    <link rel="stylesheet" type="text/css" href="/index.css"/>
    <script async src='index.js' type='text/javascript'></script>
+   <noscript><style>.holder{opacity: 0}</style></noscript>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 
@@ -71,6 +72,7 @@
          data-src="https://www.youtube.com/embed/ze9-ARjL-ZA?modestbranding=1&amp;controls=0&amp;iv_load_policy=3&amp;rel=0&amp;showinfo=0&amp;theme=light&amp;color=white&amp;playsinline=1"
          >
             <div class="holder"></div>
+            <noscript> <a href="https://youtu.be/ze9-ARjL-ZA"><img src="/imgs/tyler2.png" alt="herzog video"></a> </noscript>
          </figure>
       </footer>
    </section>
@@ -441,14 +443,16 @@
 
       window.onscroll = function(){
          scroll = window.scrollY;
-         for(var i=0;i<heights.length;i++){
-            if(!hasAnim[i]){
-               if(scroll>heights[i][0] && scroll<heights[i][1]){
-                  hasAnim[i] = true;
-                  // console.log('animating!!!!!');
-                  // console.log(anims[i].src);
-                  anims[i].src += '#start';
-                  // console.log(anims[i].src);
+         if(!artShown){
+            for(var i=0;i<heights.length;i++){
+               if(!hasAnim[i]){
+                  if(scroll>heights[i][0] && scroll<heights[i][1]){
+                     hasAnim[i] = true;
+                     // console.log('animating!!!!!');
+                     // console.log(anims[i].src);
+                     anims[i].src += '#start';
+                     // console.log(anims[i].src);
+                  }
                }
             }
          }

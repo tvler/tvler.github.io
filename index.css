@@ -194,6 +194,7 @@ figure iframe, figure img, figure noscript img, figure object{
 figure noscript img{
    visibility: visible;
    opacity: 1;
+   object-fit:initial;
 }
 figure iframe{
    -o-object-fit: initial;
