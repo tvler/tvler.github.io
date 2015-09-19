@@ -88,12 +88,6 @@ header{
    z-index: 1;
 }
 
-header > .title{
-   border: 1px solid rgba(0, 0, 255, 0.3);
-   padding: 1em;
-   background: rgba(235, 235, 235, 1);
-   box-shadow: 0 0 40px -9px rgba(0, 0, 0, 0.4);
-}
 section:nth-child(even) header > .title {background: white}
 
 header:before{
@@ -123,10 +117,14 @@ header:after{
 
 .title{
    max-width: 800px;
-   width: 95vw;
+   width: 95%;
    margin: 0 auto;
    z-index: 1;
    position: relative;
+   border: 1px solid rgba(0, 0, 255, 0.3);
+   padding: 1em;
+   background: rgba(235, 235, 235, 1);
+   box-shadow: 0 0 40px -9px rgba(0, 0, 0, 0.4);
 }
 
 .title em{
