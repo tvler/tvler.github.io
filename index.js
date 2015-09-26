@@ -2,4 +2,9 @@
 
 smoothScroll.init({
     updateURL: false,
+    callback: function ( toggle, anchor ) {
+       // console.log(toggle);
+       // console.log(anchor);
+       smoothscrollin = false;
+    }
 });
