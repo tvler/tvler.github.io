@@ -171,10 +171,6 @@ figure{
    visibility: hidden;
 }
 
-.inherit-color{
-   stop-color: inherit;
-}
-
 figure iframe, figure img, figure noscript img, figure object{
    -o-object-fit: cover;
       object-fit: cover;
@@ -185,7 +181,6 @@ figure iframe, figure img, figure noscript img, figure object{
    width: 100%;
    height: 100%;
    opacity: 0;
-   filter: alpha(opacity=0);
    -webkit-transition: .2s opacity;
            transition: .2s opacity;
 }
