@@ -411,11 +411,11 @@ figure figure:not(:first-child){
 
 #exh-cal{
    width: 80vw;
-   max-width: 750px;
+   max-width: 850px;
    box-shadow: none;
 }
 #exh-cal:before{
-   padding-top:132.024169%;
+   padding-top:121.55085599%;
 }
 
 #over-up{
