@@ -411,7 +411,7 @@ figure figure:not(:first-child){
 
 #exh-cal{
    width: 80vw;
-   max-width: 850px;
+   max-width: 900px;
    box-shadow: none;
 }
 #exh-cal:before{
