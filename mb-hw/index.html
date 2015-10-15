@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Urban Yoga | Business Overview</title>
+   <link rel="stylesheet" type="text/css" href="index.css"/>
+   <link rel="shortcut icon" href="favicon.ico" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+<header>
+   <h1>
+     <a href="/">
+       <img src="assets/logo.png" width="197" height="51" alt="Urban Yoga" />
+     </a>
+   </h1>
+   <nav id="top-nav">
+      <a id="active">Dashboard</a>
+      <nav id="sub-nav">
+         <a>Dashboard</a>
+         <a id="active-sub">Business Overview</a>
+         <a>Schedule</a>
+         <a>Reports</a>
+      </nav>
+      <a>Sign In</a>
+      <a>Classes</a>
+      <a>Workshops</a>
+      <a>Appointments</a>
+      <a>Client Home</a>
+      <a>Retail</a>
+   </nav>
+</header>
+<div id="content">
+   <section id="new">
+      <button><img src="assets/plus_icon.png" alt="plus icon" width="28" height="29"></button>
+      <h3>New Program</h3>
+   </section>
+   <div id="cards">
+      <div class="new-card">
+         <div id="widget-wrapper">
+            <div id="card-wrapper">
+               <section class="card">
+                  <h2 id="card-name">&nbsp;</h2>
+                  <h4>Sales by month</h4>
+                  <img src="assets/graph.png" alt="sales by month bar graph" width="204" height="92">
+                  <table>
+                     <tr>
+                        <td>Total Monthly <br>Sales</td>
+                        <td>Current <em>$23,483</em></td>
+                        <td>
+                           1- Year
+                           <img src="assets/spark_line.png" alt="sales line graph" width="63" height="22">
+                        </td>
+                     </tr>
+                  </table>
+                  <a>more</a>
+                  <img id="blur" src="assets/blur.png" alt="blurred out program card" width="243">
+               </section>
+            </div>
+            <form id="input">
+               <div id="left">
+                  <div>
+                     <h2 class="block">Tags:</h2>
+                     <div class="tag"><input type="checkbox" name="tags" value="outside">Outside</div>
+                     <div class="tag"><input type="checkbox" name="tags" value="inside">Inside</div>
+                     <div class="tag"><input type="checkbox" name="tags" value="gym">Gym</div>
+                     <br>
+                     <div class="tag"><input type="checkbox" name="tags" value="classes">Classes</div>
+                     <div class="tag"><input type="checkbox" name="tags" value="appointments">Appointments</div>
+                     <div class="tag"><input type="checkbox" name="tags" value="workshops">Workshops</div>
+                  </div>
+               </div>
+               <div id="right">
+                  <textarea rows="1" id="name" placeholder="Program name"></textarea>
+                  <br>
+                  <h2 class="block">Program type:</h2>
+                  <input type="radio" name="type" value="Count-Series"> Count Series<br>
+                  <input type="radio" name="type" value="Type-Series"> Type Series<br>
+                  <input type="radio" name="type" value="Membership"> Membership
+                  <br>
+                  <h2>Online scheduling:</h2>
+                  <div class="tag"><input type="checkbox" name="online" value="true">Allow</div>
+                  <br>
+                  <h2 id="last-input">Default capacity:</h2>
+                  <input type="number" name="quantity" min="1" value="1">
+                  <button>Create</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
