@@ -2,6 +2,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body{
    font-family: "Verdana", "Lucida Grande", sans-serif;
+   background: -webkit-linear-gradient(left, #E0DFD5 0%, #F4F4EE 25%, #F4F4EE 75%, #E0DFD5 100%), #F4F4EE;
    background: linear-gradient(to right, #E0DFD5 0%, #F4F4EE 25%, #F4F4EE 75%, #E0DFD5 100%), #F4F4EE;
    min-width: 1134px;
 }
@@ -42,6 +43,7 @@ h1{
    padding: 0 16px;
 }
 #top-nav > a:last-child{
+   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 7%, #BFBFBF 50%, rgba(0, 0, 0, 0) 93%), -webkit-linear-gradient(rgba(0, 0, 0, 0) 7%, #BFBFBF 50%, rgba(0, 0, 0, 0) 93%);
    background-image: linear-gradient(rgba(0, 0, 0, 0) 7%, #BFBFBF 50%, rgba(0, 0, 0, 0) 93%), linear-gradient(rgba(0, 0, 0, 0) 7%, #BFBFBF 50%, rgba(0, 0, 0, 0) 93%);
    background-position: left, right;
 }
@@ -56,13 +58,15 @@ nav a{
    display: inline-block;
 }
 #top-nav > a{
-   transition: .2s padding, .2s border-radius, .2s box-shadow;
+   -webkit-transition: .2s padding, .2s border-radius, .2s box-shadow;
+           transition: .2s padding, .2s border-radius, .2s box-shadow;
    position: relative;
    padding: 1em 1.56em;
    letter-spacing: 0.03em;
    color: #729582;
    font-weight: 600;
    font-size: 13px;
+   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 7%, #BFBFBF 50%, rgba(0, 0, 0, 0) 93%);
    background-image: linear-gradient(rgba(0, 0, 0, 0) 7%, #BFBFBF 50%, rgba(0, 0, 0, 0) 93%);
    background-size: 1px 100%;
    background-repeat: no-repeat;
@@ -111,6 +115,7 @@ a{
    background: green;
    border: 1px solid #9ABA87;
    box-shadow: inset 0px 1px 0px 0px #D8F6BC;
+   background-image: -webkit-linear-gradient(#BBD59F, #97BC83);
    background-image: linear-gradient(#BBD59F, #97BC83);
    width: 75px;
    height: 67px;
@@ -251,7 +256,8 @@ i{
    color: #8A8A7C;
 }
 .reveal{
-   transition: .2s height;
+   -webkit-transition: .2s height;
+           transition: .2s height;
    height: 0px;
    overflow: hidden;
    position: relative;
@@ -301,7 +307,8 @@ i{
 .new-card{
    height: 0;
    overflow: hidden;
-   transition: .2s height;
+   -webkit-transition: .2s height;
+           transition: .2s height;
    position: relative;
    max-width: 780px;
    text-align: center;
@@ -352,7 +359,8 @@ textarea{
    border-radius: 4px;
    resize: none;
    font-family: inherit;
-   transition: .2s border, .2s box-shadow;
+   -webkit-transition: .2s border, .2s box-shadow;
+           transition: .2s border, .2s box-shadow;
    font-size: 16px;
    padding: 5px;
 }
@@ -395,7 +403,8 @@ input[type="number"]{
    padding: 5px;
    color: #A9A9A9;
    border-radius: 4px;
-   transition: .2s border, .2s box-shadow;
+   -webkit-transition: .2s border, .2s box-shadow;
+           transition: .2s border, .2s box-shadow;
    font-size: 11px;
    width: 54px;
 }
@@ -415,7 +424,8 @@ input[type="number"]:focus{
    cursor: pointer;
    font-size: 11px;
    margin-bottom: 8px;
-   transition: .2s box-shadow, .2s background;
+   -webkit-transition: .2s box-shadow, .2s background;
+           transition: .2s box-shadow, .2s background;
 }
 .tagged{
    background: #4F4F45;
@@ -432,6 +442,7 @@ input[type="number"]:focus{
    background: green;
    border: 1px solid #9ABA87;
    box-shadow: inset 0px 1px 0px 0px #D8F6BC;
+   background-image: -webkit-linear-gradient(#BBD59F, #97BC83);
    background-image: linear-gradient(#BBD59F, #97BC83);
    cursor: pointer;
    color: white;
