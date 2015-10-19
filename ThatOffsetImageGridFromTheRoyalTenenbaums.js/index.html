@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Offset</title>
+   <link rel="stylesheet" type="text/css" href="index.css"/>
+   <script src="ThatOffsetImageGridFromTheRoyalTenenbaums.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+      </script>
+      <h1>That Offset Image Grid From<br>The Royal Tenenbaums<br>. Javascript</h1>
+
+      <pre>&lt;figure
+  <em>data-offset = &quot;wes1.png&quot;</em>
+&gt;&lt;/figure&gt;</pre>
+      <figure data-offset="wes1.png"></figure>
+
+      <blockquote>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A brand-new javascript file for repeating an HTML element's background image in a manner such that there will always be a vertically and horizontally centered image, and adjacent columns will vertically offset by exactly one-half of the image's height.</blockquote>
+
+      <h2>Available on <a href="https://github.com/tvler">Github</a>,
+      built by <a href="http://tylerdeitz.co/">Tyler</a>.</h2>
+
+      <h3>3 Ways To Use</h3>
+      <h4><a>1</a>HTML + Inline URL</h4>
+      <pre>&lt;figure
+  <em>data-offset = 'wes1.png'</em>
+&gt;&lt;/figure&gt;</pre>
+
+      <h4><a>2</a>HTML + CSS URL</h4>
+      <pre>
+figure{
+  <em>background:url('wes1.png')</em>
+}
+
+&lt;figure
+  <em>data-offset</em>
+&gt;&lt;/figure&gt;</pre>
+
+      <h4><a>3</a>HTML + Parameters</h4>
+
+      <h5><a>##</a>Default parameters</h5>
+      <pre>
+<i>&quot;src&quot;</i>       : &quot;&quot;,</pre>
+<p><code>String of the image's URL</code></p><pre>
+
+<i>&quot;snap&quot;</i>      : false,</pre>
+<p><code>Change width of image
+to create a whole number
+of columns, only respecting
+one min/max property</code></p><pre>
+
+<i>&quot;minWidth&quot;</i>  : 0,
+<i>&quot;maxWidth&quot;</i>  : 0,
+<i>&quot;width&quot;</i>     : 0,
+<i>&quot;minHeight&quot;</i> : 0,
+<i>&quot;maxHeight&quot;</i> : 0,
+<i>&quot;height&quot;</i>    : 0</pre>
+<p><code>Can be a number or string
+ending in 'px' or '%'</code></p>
+
+   <h5><a>##</a>Override in HTML</h5>
+   <pre>&lt;figure
+  <em>data-offset = '{</em>
+    <i>"src"</i>      : "wes1.png",
+    <i>"width"</i>    : "20%",
+    <i>"maxWidth"</i> : 200,
+  <em>}'</em>
+&gt;&lt;/figure&gt;</pre>
+
+   <h3>2 Steps To Run</h3>
+
+   <h4><a>1</a>Link The Javascript File</h4>
+   <pre>&lt;script
+  <em>src="ThatOffsetImageGridFromTheRoyalTenenbaums.js"</em>
+&gt;&lt;/script&gt;</pre>
+
+   <h4><a>2</a>Initialize Javascript</h4>
+
+<footer></footer>
+
+      <!-- <pre>&lt;figure
+  <em>data-offset = &quot;wes1.png&quot;</em>
+&gt;&lt;/figure&gt;</pre>
+      <figure data-offset="wes1.png"></figure>
+
+      <pre>&lt;figure
+  <em>data-offset = &quot;wes2.png&quot;</em>
+&gt;&lt;/figure&gt;</pre>
+      <figure data-offset="wes2.png"></figure>
+
+      <pre>&lt;figure
+  <em>data-offset = &quot;wes2.png&quot;</em>
+&gt;&lt;/figure&gt;</pre>
+      <figure data-offset style="background: url('wes2.png');"></figure> -->
+
+      <!-- <pre>&lt;figure
+ <em>data-offset = &quot;wes2.png&quot;</em>
+&gt;&lt;/figure&gt;</pre>
+      <figure data-offset='{"src": "wes3.png", "maxWidth": 0}'></figure> -->
+      <!-- <figure data-offset></figure> -->
+
+<!-- <script>window.onresize = _offsetImg.update;</script> -->
+</body>
+
+<!-- http://www.leavemethewhite.com/caps/thumbnails.php?album=117&page=7
+http://www.leavemethewhite.com/caps/displayimage.php?album=117&pid=43315#top_display_media
+http://www.leavemethewhite.com/caps/displayimage.php?album=117&pid=43342#top_display_media
+http://www.leavemethewhite.com/caps/displayimage.php?album=117&pid=43888#top_display_media
+http://www.leavemethewhite.com/caps/displayimage.php?album=117&pid=43323#top_display_media
+http://www.leavemethewhite.com/caps/displayimage.php?album=117&pid=43300#top_display_media
+http://www.leavemethewhite.com/caps/displayimage.php?album=117&pid=43247#top_display_media
+http://www.leavemethewhite.com/caps/displayimage.php?album=117&pid=43305#top_display_media
+https://www.songkick.com/concerts/24941259-homeshake-at-babys-all-right
+
+http://www.rowsdowr.com/2012/08/25/the-royal-tenenbaums-book-and-magazine-covers/ithkbta2n1axb/
+http://www.rowsdowr.com/2012/08/25/the-royal-tenenbaums-book-and-magazine-covers/ib0kkr3vzfgndm/ -->
