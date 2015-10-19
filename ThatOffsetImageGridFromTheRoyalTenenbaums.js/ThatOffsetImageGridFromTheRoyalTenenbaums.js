@@ -2,7 +2,7 @@ var _offsetImg = {};
 
 // variables
 //
-_offsetImg.defaultSettings = {
+_offsetImg.defaultValues = {
    // "public"
    src         : '',
    snap        : false,
@@ -17,13 +17,15 @@ _offsetImg.defaultSettings = {
    keepRatio   : true,   // if the image aspect ratio won't be messed with
    ratio       : 0,
 }
-_offsetImg.imgs     = [];
-_offsetImg.settings = [];
+
 
 // initializing and first update
 //
 _offsetImg.init = function(){
    _offsetImg.offs     = document.querySelectorAll('[data-offset]');
+   _offsetImg.imgs     = [];
+   _offsetImg.settings = [];
+
    for(var j=0; j<this.offs.length; j++){
 
       // local vars
@@ -42,7 +44,7 @@ _offsetImg.init = function(){
       // **
          if(!elemSettings){
             // console.log('here');
-            this.settings[j] = this.extend( this.defaultSettings, {} );
+            this.settings[j] = this.extend( this.defaultValues, {} );
             this.settings[j].src = (off.style.backgroundImage || window.getComputedStyle(off, null).backgroundImage);
             this.settings[j].src = this.settings[j].src.replace('url(','').replace(')','').replace("'","").replace('"','').replace("'","").replace('"','');
             off.style.background = '';
@@ -51,15 +53,18 @@ _offsetImg.init = function(){
          // ** if an attribute is a JSON object
          // **
          else if(elemSettings[0] === '{'){
-            // cosole.log('jspn');
-            this.settings[j] = this.extend( this.defaultSettings, JSON.parse(elemSettings) || {} );
+            // cosole.log('json');
+            this.settings[j] = this.extend( this.defaultValues, JSON.parse(elemSettings) || {} );
+            if(!this.settings[j].src){
+               this.settings[j].src.replace('url(','').replace(')','').replace("'","").replace('"','').replace("'","").replace('"','');
+            }
          }
 
       // ** else, the attribute data is only the image file
       // **
          else{
             // console.log('just url');
-            this.settings[j] = this.extend( this.defaultSettings, {} );
+            this.settings[j] = this.extend( this.defaultValues, {} );
             this.settings[j].src = elemSettings;
          }
 

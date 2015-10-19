@@ -43,8 +43,8 @@ pre{
    font-family: monospace;
    margin-bottom: .4em;
    font-size: 1.2em;
-   overflow-x: scroll;
-   overflow-y: hidden;
+   line-height: 1.2em;
+   overflow: scroll;
    -webkit-overflow-scrolling: touch;
            overflow-scrolling: touch;
    /*margin-top: -1rem;*/
@@ -117,19 +117,26 @@ p{
    font-size: 1.15rem;
    color: rgba(210,216,225,0.4);
    display: block;
-   font-family: monospace;
    margin-bottom: .4em;
    font-size: 1.2em;
 }
 code{
-   max-width: 450px;
-   display: block;
+   font-family: monospace;
+   max-width: 470px;
+   display: inline-block;
+}
+.indent{
+   margin-left: 1em;
 }
 a{
    color: rgb(240, 216, 121);
 }
 h4 > a, h5 > a{
    padding-right: .4em;
+}
+
+h5 > a{
+   color: rgba(240, 216, 121, 0.7);
 }
 
 figure{

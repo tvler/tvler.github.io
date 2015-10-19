@@ -5,6 +5,7 @@
    <title>Offset</title>
    <link rel="stylesheet" type="text/css" href="index.css"/>
    <script src="ThatOffsetImageGridFromTheRoyalTenenbaums.js"></script>
+   <script>window.onresize = _offsetImg.update</script>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 
@@ -38,36 +39,35 @@ figure{
   <em>data-offset</em>
 &gt;&lt;/figure&gt;</pre>
 
-      <h4><a>3</a>HTML + Parameters</h4>
+      <h4><a>3</a>HTML + JSON</h4>
+      <pre>&lt;figure
+  <em>data-offset = '{</em>
+    <i>"src"</i>      : "wes1.png",
+    <i>"width"</i>    : "20%",
+    <i>"maxWidth"</i> : 200
+  <em>}'</em>
+&gt;&lt;/figure&gt;</pre>
 
-      <h5><a>##</a>Default parameters</h5>
-      <pre>
+<h5><a>##</a>Default values</h5>
+<pre>
 <i>&quot;src&quot;</i>       : &quot;&quot;,</pre>
-<p><code>String of the image's URL</code></p><pre>
+<p><code class="indent" >String of the image's URL<br>
+(If not given, CSS URL will be used)</code></p><pre>
 
 <i>&quot;snap&quot;</i>      : false,</pre>
-<p><code>Change width of image
+<p><code class="indent" >Change width of image
 to create a whole number
 of columns, only respecting
 one min/max property</code></p><pre>
 
 <i>&quot;minWidth&quot;</i>  : 0,
-<i>&quot;maxWidth&quot;</i>  : 0,
+<i>&quot;maxWidth&quot;</i>  : "100%",
 <i>&quot;width&quot;</i>     : 0,
 <i>&quot;minHeight&quot;</i> : 0,
-<i>&quot;maxHeight&quot;</i> : 0,
+<i>&quot;maxHeight&quot;</i> : "100%",
 <i>&quot;height&quot;</i>    : 0</pre>
-<p><code>Can be a number or string
+<p><code class="indent" >Can be a number or string
 ending in 'px' or '%'</code></p>
-
-   <h5><a>##</a>Override in HTML</h5>
-   <pre>&lt;figure
-  <em>data-offset = '{</em>
-    <i>"src"</i>      : "wes1.png",
-    <i>"width"</i>    : "20%",
-    <i>"maxWidth"</i> : 200,
-  <em>}'</em>
-&gt;&lt;/figure&gt;</pre>
 
    <h3>2 Steps To Run</h3>
 
@@ -75,9 +75,25 @@ ending in 'px' or '%'</code></p>
    <pre>&lt;script
   <em>src="ThatOffsetImageGridFromTheRoyalTenenbaums.js"</em>
 &gt;&lt;/script&gt;</pre>
+   <h5><a>##</a>This creates the variable<em><code class="indent" >_offsetImg</code></em></h5>
 
-   <h4><a>2</a>Initialize Javascript</h4>
+   <h4><a>2</a>Set An Event To Update The Grid</h4>
+   <pre><em>_offsetImg.update()</em></pre>
+   <p><code class="indent">When a data-offset element resizes, it's grid needs to update</p></code>
 
+   <h5><a>##</a>Example hook</h5>
+   <pre>window.onresize =
+  <em>_offsetImg.update;</em></pre>
+
+   <h3>Settings</h3>
+
+   <h4><a>1</a>Add, Edit, Or Remove Data-Offset Elements</h4>
+   <pre><em>_offsetImg.init()</em></pre>
+   <p><code class="indent">Run this function after an element is added or removed</p></code>
+
+   <h4><a>2</a>Change Dafault Values</h4>
+   <pre><em>_offsetImg.defaultValues</em></pre>
+   <p><code class="indent">The exposed object can be changed before DOMContentLoaded is fired</p></code>
 <footer></footer>
 
       <!-- <pre>&lt;figure
