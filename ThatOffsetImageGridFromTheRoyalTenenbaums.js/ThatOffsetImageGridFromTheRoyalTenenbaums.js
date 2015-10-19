@@ -16,6 +16,8 @@ _offsetImg.defaultValues = {
    //"private" (don't enter these parameters into ur settings or else)
    keepRatio   : true,   // if the image aspect ratio won't be messed with
    ratio       : 0,
+   oldWidth    : 0,
+   oldHeight   : 0
 }
 
 
@@ -104,6 +106,15 @@ _offsetImg.paintBack = function(){
        imgW     = this.naturalWidth,
        imgH     = this.naturalHeight,
        size;
+
+   // DON'T RUN THIS FUNCTION IF THE ELEMENT WIDTH AND HEIGHT ARE THE SAME AS LAST TIME
+   //
+   if(settings.oldWidth && settings.oldWidth === elemW && settings.oldHeight === elemH){
+      return;
+   }
+
+   settings.oldWidth =  elemW;
+   settings.oldHeight = elemH;
 
    // setting ratio for the first time
    //
