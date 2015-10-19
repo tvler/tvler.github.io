@@ -27,7 +27,6 @@ h1{
 }
 figure{
    max-width: 900px;
-   background: black;
    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .6);
    margin-top: 0;
 }
