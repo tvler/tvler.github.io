@@ -34,16 +34,12 @@ _offsetImg.init = function(){
           elemSettings = off.getAttribute('data-offset'),
           img      = new Image();
 
-      // console.log(this.offs)
-
-      // console.log(elemSettings);
-
       // reading an element's settings
       //
+
       // ** if elemSettings is blank, get image from .style or .getComputedStyle
       // **
          if(!elemSettings){
-            // console.log('here');
             this.settings[j] = this.extend( this.defaultValues, {} );
             this.settings[j].src = (off.style.backgroundImage || window.getComputedStyle(off, null).backgroundImage);
             this.settings[j].src = this.settings[j].src.replace('url(','').replace(')','').replace("'","").replace('"','').replace("'","").replace('"','');
@@ -53,7 +49,6 @@ _offsetImg.init = function(){
          // ** if an attribute is a JSON object
          // **
          else if(elemSettings[0] === '{'){
-            // cosole.log('json');
             this.settings[j] = this.extend( this.defaultValues, JSON.parse(elemSettings) || {} );
             if(!this.settings[j].src){
                this.settings[j].src.replace('url(','').replace(')','').replace("'","").replace('"','').replace("'","").replace('"','');
@@ -63,14 +58,10 @@ _offsetImg.init = function(){
       // ** else, the attribute data is only the image file
       // **
          else{
-            // console.log('just url');
             this.settings[j] = this.extend( this.defaultValues, {} );
             this.settings[j].src = elemSettings;
          }
 
-         // console.log(this);
-         // console.log(this.settings);
-         // console.log(settings);
       //
       // end of reading the settings
 
@@ -117,7 +108,6 @@ _offsetImg.paintBack = function(){
    // setting ratio for the first time
    //
    if(!settings.ratio){
-      // console.log('setting ratio');
       settings.ratio = this.width / this.height;
    }
 
@@ -230,7 +220,6 @@ _offsetImg.paintBack = function(){
          if(snapRows < 3) snapRows = 3;
          imgW = elemW / snapRows;
          imgH = imgW / settings.ratio;
-         console.log(this);
       }
    //
    // end of conditional settings
@@ -314,12 +303,10 @@ _offsetImg.parseInput = function(inp, elemW){
    if(isNaN(inp)){
       var unit = (inp.match(/(%|px)$/)||["px"])[0];
    }
-   // console.log(unit);
 
    // if unit is a percentage
    //
    if(unit === '%'){
-      // console.log('percentage');
       num *= elemW / 100;
    }
 
