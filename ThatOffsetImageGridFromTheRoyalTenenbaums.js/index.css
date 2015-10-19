@@ -46,6 +46,8 @@ pre{
    font-size: 1.2em;
    overflow-x: scroll;
    overflow-y: hidden;
+   -webkit-overflow-scrolling: touch;
+           overflow-scrolling: touch;
    /*margin-top: -1rem;*/
 }
 em, p{
