@@ -244,18 +244,19 @@ _offsetImg.paintBack = function(){
    var vert   = ' / '+imgW+'px '+imgH+'px, ',
        center = (elemW - imgW) / 2,
        amount = Math.floor(Math.ceil(elemW / imgW) / 2),
-       i      = -1,
+       i      = 1,
        rows   = 2*amount + 1,
        place;
 
    // the painting!!!!!!!!!!!!
    //
-   while(++i <= amount){
-      place = 'px ' + (i % 2 ? (elemH/2)+'px' : '50%') + vert;
+   while(i <= amount){
+      place = 'px ' + (elemH/2)+'px' + vert;
       style += url+(center + i * imgW)+place + url+(center - i * imgW)+place;
+      i += 2;
    }
+   style += 'url("'+this.src+'") repeat '+(center)+'px 50%' + vert;
    style = style.slice(0,-2);
-   // console.log(style);
    elem.style.background = style;
 }
 

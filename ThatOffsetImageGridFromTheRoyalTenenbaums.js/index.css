@@ -2,31 +2,24 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body{
    background: rgb(44, 51, 61);
+   padding: 4em 0;
 }
 body > *{
    margin: 0 auto;
-   max-width: 1250px;
-   width: 95vw;
+   max-width: 900px;
+   width: 95%;
 }
-h1, figure, h2, h3, blockquote, footer{
+h1, figure, h2, h3, blockquote{
    margin-bottom: 4rem;
-}
-body > *:first-child{
-   margin-top: 4rem;
 }
 h1{
    text-align: center;
-   font-family: Futura, Helvetica, Ariel, sans-serif;
    text-transform: uppercase;
-   color: #F3EB40;
    color: rgb(240, 216, 121);
-   font-weight: 600;
-   line-height: 1.3em;
-   font-size: 2.6em;
    width: 100%;
+   font: bold 2.6em/1.3em Futura, Helvetica, Ariel, sans-serif;
 }
 figure{
-   max-width: 900px;
    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .6);
    margin-top: 0;
 }
@@ -36,24 +29,16 @@ figure:before{
    content: '';
 }
 pre{
-   max-width: 900px;
-   font-size: 1.15rem;
+   font: 1.2em/1.2em monospace;
    color: rgba(210,216,225,0.4);
    display: block;
-   font-family: monospace;
    margin-bottom: .4em;
-   font-size: 1.2em;
-   line-height: 1.2em;
    overflow: scroll;
    -webkit-overflow-scrolling: touch;
            overflow-scrolling: touch;
-   /*margin-top: -1rem;*/
 }
 em, p{
    color: rgb(210, 216, 225);
-}
-p{
-   max-width: 900px;
 }
 h4, h5{
    margin-bottom: 1rem;
@@ -63,58 +48,29 @@ i{
    color: rgb(210, 216, 225);
 }
 blockquote{
+   max-width: 1250px;
+   font: italic 1.9em/1.2em Georgia, serif;
    color: rgb(210,216,225);
-   font-family: Georgia, serif;
-   font-style: italic;
-   line-height: 1.2em;
-   font-size: 1.9em;
 }
-/*h2{
-   font-family: Futura, Helvetica, Ariel, sans-serif;
-   text-transform: uppercase;
-   color: #F3EB40;
-   color: rgb(210, 216, 225);
-   font-weight: 600;
-   line-height: 1.3em;
-   font-size: 2em;
-   max-width: 900px;
-}*/
 h3{
+   max-width: 1250px;
+   font: italic bold 1.9em/1.2em Georgia, serif;
    color: rgba(210,216,225,0.4);
-   font-family: Georgia, serif;
-   font-style: italic;
-   line-height: 1.2em;
-   font-size: 1.9em;
    margin-top: 4rem;
-   font-weight: 600;
    border-top: 1px solid rgb(210,216,225);
-   /*background: linear-gradient(to right, rgb(210,216,225), rgba(210,216,225, 0));
-   background-size: 100% 1px;
-   background-repeat: no-repeat;*/
 }
 h2, h4{
-   font-family: Futura, Helvetica, Ariel, sans-serif;
    text-transform: uppercase;
-   color: #F3EB40;
    color: rgb(210, 216, 225);
-   font-weight: 600;
-   line-height: 1.3em;
-   font-size: 1.5em;
-   max-width: 900px;
    margin-top: 4rem;
+   font: bold 1.5em/1.3em Futura, Helvetica, Ariel, sans-serif;
 }
 h5{
-   max-width: 900px;
-   margin-top: 2rem;
-   font-family: Georgia, serif;
-   font-size: 1.3em;
-   font-style: italic;
-   font-weight: bold;
+   margin-top: 2em;
+   font: italic bold 1.3em Georgia, serif;
    color: rgba(210,216,225,0.4);
 }
 p{
-   max-width: 900px;
-   font-size: 1.15rem;
    color: rgba(210,216,225,0.4);
    display: block;
    margin-bottom: .4em;
@@ -129,16 +85,9 @@ code{
 a{
    color: rgb(240, 216, 121);
 }
-h4 > a, h5 > a{
-   padding-right: .4em;
-}
 
 h5 > a{
    color: rgba(240, 216, 121, 0.7);
-}
-
-figure{
-
 }
 
 @media(max-width:1100px){
