@@ -17,14 +17,13 @@ _offsetImg.defaultSettings = {
    keepRatio   : true,   // if the image aspect ratio won't be messed with
    ratio       : 0,
 }
-_offsetImg.offs     = document.querySelectorAll('[data-offset]');
 _offsetImg.imgs     = [];
 _offsetImg.settings = [];
 
 // initializing and first update
 //
 _offsetImg.init = function(){
-   // console.log(this.settings);
+   _offsetImg.offs     = document.querySelectorAll('[data-offset]');
    for(var j=0; j<this.offs.length; j++){
 
       // local vars
@@ -317,4 +316,13 @@ _offsetImg.parseInput = function(inp, elemW){
    }
 
    return num;
+}
+
+if(document.readyState !== 'loading'){
+   _offsetImg.init();
+}
+else{
+   document.addEventListener("DOMContentLoaded", function() {
+      _offsetImg.init();
+   });
 }

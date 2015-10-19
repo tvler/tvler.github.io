@@ -4,10 +4,12 @@
    <meta charset="UTF-8">
    <title>Offset</title>
    <link rel="stylesheet" type="text/css" href="index.css"/>
+   <script src="ThatOffsetImageGridFromTheRoyalTenenbaums.js"></script>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 
 <body>
+      </script>
       <h1>That Offset Image Grid From<br>The Royal Tenenbaums<br>. Javascript</h1>
 
       <pre>&lt;figure
@@ -19,7 +21,8 @@
 
       <h2>Available on <a href="https://github.com/tvler">Github</a>,
       built by <a href="http://tylerdeitz.co/">Tyler</a>.</h2>
-<h3>3 Ways To Use</h3>
+
+      <h3>3 Ways To Use</h3>
       <h4><a>1</a>HTML + Inline URL</h4>
       <pre>&lt;figure
   <em>data-offset = 'wes1.png'</em>
@@ -39,24 +42,23 @@ figure{
 
       <h5><a>##</a>Default parameters</h5>
       <pre>
-<i>&quot;src&quot;</i>       : &quot;&quot;,
-String of the image's URL
+<i>&quot;src&quot;</i>       : &quot;&quot;,</pre>
+<p><code>String of the image's URL</code></p><pre>
 
-<i>&quot;snap&quot;</i>      : false,
-Change width of image
+<i>&quot;snap&quot;</i>      : false,</pre>
+<p><code>Change width of image
 to create a whole number
 of columns, only respecting
-one min/max property
+one min/max property</code></p><pre>
 
 <i>&quot;minWidth&quot;</i>  : 0,
 <i>&quot;maxWidth&quot;</i>  : 0,
 <i>&quot;width&quot;</i>     : 0,
 <i>&quot;minHeight&quot;</i> : 0,
 <i>&quot;maxHeight&quot;</i> : 0,
-<i>&quot;height&quot;</i>    : 0
-Can be a number or string
-ending in 'px' or '%'
-</pre>
+<i>&quot;height&quot;</i>    : 0</pre>
+<p><code>Can be a number or string
+ending in 'px' or '%'</code></p>
 
    <h5><a>##</a>Override in HTML</h5>
    <pre>&lt;figure
@@ -66,6 +68,15 @@ ending in 'px' or '%'
     <i>"maxWidth"</i> : 200,
   <em>}'</em>
 &gt;&lt;/figure&gt;</pre>
+
+   <h3>2 Steps To Run</h3>
+
+   <h4><a>1</a>Link The Javascript File</h4>
+   <pre>&lt;script
+  <em>src="ThatOffsetImageGridFromTheRoyalTenenbaums.js"</em>
+&gt;&lt;/script&gt;</pre>
+
+   <h4><a>2</a>Initialize Javascript</h4>
 
 <footer></footer>
 
@@ -90,8 +101,7 @@ ending in 'px' or '%'
       <figure data-offset='{"src": "wes3.png", "maxWidth": 0}'></figure> -->
       <!-- <figure data-offset></figure> -->
 
-<script type="text/javascript" src="OffsetImageThingFromTheRoyalTenenbaums.js"></script>
-<script>_offsetImg.init(); window.onresize = _offsetImg.update;</script>
+<!-- <script>window.onresize = _offsetImg.update;</script> -->
 </body>
 
 <!-- http://www.leavemethewhite.com/caps/thumbnails.php?album=117&page=7

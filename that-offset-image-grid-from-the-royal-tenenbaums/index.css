@@ -44,6 +44,8 @@ pre{
    font-family: monospace;
    margin-bottom: .4em;
    font-size: 1.2em;
+   overflow-x: scroll;
+   overflow-y: hidden;
    /*margin-top: -1rem;*/
 }
 em, p{
@@ -82,6 +84,7 @@ h3{
    font-style: italic;
    line-height: 1.2em;
    font-size: 1.9em;
+   margin-top: 4rem;
    font-weight: 600;
    border-top: 1px solid rgb(210,216,225);
    /*background: linear-gradient(to right, rgb(210,216,225), rgba(210,216,225, 0));
@@ -110,12 +113,16 @@ h5{
 }
 p{
    max-width: 900px;
-   margin-top: 2rem;
+   font-size: 1.15rem;
+   color: rgba(210,216,225,0.4);
+   display: block;
+   font-family: monospace;
+   margin-bottom: .4em;
    font-size: 1.2em;
-   max-width: 900px;
-   font-weight: 600;
-   font-style: italic;
-   font-family: Georgia;
+}
+code{
+   max-width: 450px;
+   display: block;
 }
 a{
    color: rgb(240, 216, 121);
