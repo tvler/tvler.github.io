@@ -120,23 +120,19 @@ _offsetImg.paintBack = function(){
       // console.log('setting ratio');
       settings.ratio = this.width / this.height;
    }
-   //
-   // console.log('settings');
-   // console.log(this);
-   // console.log(index);
-   // console.log(settings);
 
    // conditional formating based on settings
    //
+
+   // ** if the ratio is being kept
+   // ** aka if width XOR height has been declared
+   // **
       if(settings.keepRatio){
-         // console.log('keeping ratio');
          if(settings.width){
             imgW = _offsetImg.parseInput(settings.width, elemW);
             imgH = imgW / settings.ratio;
-            // console.log(this);
          }
          else if(settings.height){
-            // console.log('heighting');
             imgH = _offsetImg.parseInput(settings.height, elemH);
             imgW = imgH * settings.ratio;
          }
@@ -153,11 +149,14 @@ _offsetImg.paintBack = function(){
             imgH = imgW / settings.ratio;
          }
          if(settings.maxHeight && imgH > (size = _offsetImg.parseInput(settings.maxHeight, elemH))){
-            // console.log('here');
             imgH = size;
             imgW = imgH * settings.ratio;
          }
       }
+
+   // ** if the ratio is NOT being kept
+   // ** aka if width AND height has been declared
+   // **
       else{
          imgW = _offsetImg.parseInput(settings.width, elemW);
          imgH = _offsetImg.parseInput(settings.height, elemH);
@@ -200,7 +199,7 @@ _offsetImg.paintBack = function(){
             var floorOrCeil = Math.ceil;
          }
 
-         // if both min width/height are set, choose the smallest constraint
+         // if both min width/height are set, choose the largest constraint
          //
          else if(settings.minWidth && settings.minHeight){
             var snapWidth   = Math.max(_offsetImg.parseInput(settings.minWidth, elemW), _offsetImg.parseInput(settings.minHeight, elemH) * settings.ratio);
@@ -236,11 +235,14 @@ _offsetImg.paintBack = function(){
    //
    // end of conditional settings
 
-   // creating local vars that depend on the conditional settings
+   // maxing the image dimensions because CSS background doesn't take
+   // decimal image sizes
    //
    imgW = Math.ceil(imgW);
    imgH = Math.ceil(imgH);
 
+   // creating local vars that depend on the conditional settings
+   //
    var vert   = ' / '+imgW+'px '+imgH+'px, ',
        center = (elemW - imgW) / 2,
        amount = Math.floor(Math.ceil(elemW / imgW) / 2),
