@@ -80,7 +80,6 @@ code{
    font-family: monospace;
    max-width: 470px;
    display: inline-block;
-   margin-left: 1em;
 }
 a{
    color: rgb(240, 216, 121);
@@ -93,9 +92,6 @@ h4 > a{
 h4 > i{
    display: table-cell;
    font-style: normal;
-}
-p > code{
-   margin-left: 1em;
 }
 code, pre, h5{
    padding-left: 25px;
