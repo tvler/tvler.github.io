@@ -100,6 +100,15 @@ h5 > a{
       font-size: 5.5vw;
    }
    blockquote{
-      font-size: 1.2em;
+      font-size: 1.1em;
+   }
+   h2, h4{
+      font-size: 1.1em;
+   }
+   h3{
+      font-size: 1.4em;
+   }
+   h5{
+      font-size: 1.1em;
    }
 }
