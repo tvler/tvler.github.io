@@ -33,6 +33,9 @@ h1{
    width: 100%;
    font: bold 2.6em/1.3em Futura, Helvetica, Ariel, sans-serif;
 }
+h1 a{
+   text-decoration: none;
+}
 figure{
    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .6);
    margin-top: 0;
@@ -43,8 +46,9 @@ figure:before{
    content: '';
 }
 pre{
-   font: .9em/1.2em 'Source Code Pro' monospace;
-   color: rgba(210,216,225,0.4);
+   font: .9em/1.2em 'Source Code Pro', monospace;
+   /*color: rgba(210,216,225,0.4);*/
+   color: rgb(110, 116, 126);
    display: block;
    margin-bottom: .4em;
    overflow: scroll;
@@ -63,13 +67,14 @@ i{
 }
 blockquote{
    max-width: 1250px;
-   font: italic 1.9em/1.2em Georgia, serif;
+   font: italic 1.5em/1.2em Georgia, serif;
    color: rgb(210,216,225);
 }
 h3{
    max-width: 1250px;
    font: italic bold 1.9em/1.2em Georgia, serif;
-   color: rgba(210,216,225,0.4);
+   /*color: rgba(210,216,225,0.4);*/
+   color: rgb(110, 116, 126);
    margin-top: 4rem;
    border-top: 1px solid rgb(210,216,225);
 }
@@ -77,20 +82,27 @@ h2, h4{
    text-transform: uppercase;
    color: rgb(210, 216, 225);
    margin-top: 4rem;
-   font: bold 1.5em/1.3em Futura, Helvetica, Ariel, sans-serif;
+   font: bold 1.3em/1.3em Futura, Helvetica, Ariel, sans-serif;
 }
 h5{
    margin-top: 2em;
    font: italic bold 1.3em Georgia, serif;
-   color: rgba(210,216,225,0.4);
+   /*color: rgba(210,216,225,0.4);*/
+   color: rgb(110, 116, 126);
+}
+h5 a{
+   color: inherit;
+   /*text-decoration: initial;
+   border-bottom: 2px solid;*/
 }
 p{
-   color: rgba(210,216,225,0.4);
+   /*color: rgba(210,216,225,0.4);*/
+   color: rgb(110, 116, 126);
    display: block;
    margin-bottom: .4em;
 }
 code{
-   font: .9em/1.2em 'Source Code Pro' monospace;
+   font: .9em/1.2em 'Source Code Pro', monospace;
    max-width: 500px;
    display: inline-block;
 }
@@ -98,9 +110,10 @@ a{
    color: rgb(240, 216, 121);
 }
 
-h4 > a{
+h4 > em{
    display: table-cell;
    width: 25px;
+   color: rgb(240, 216, 121);
 }
 h4 > i{
    display: table-cell;
@@ -113,11 +126,6 @@ code, pre, h5{
    padding-left: 0;
 }
 
-@media(max-width:1100px){
-   blockquote{
-      font-size: 1.5em;
-   }
-}
 @media(max-width:775px){
    h1{
       font-size: 5.5vw;
@@ -134,7 +142,7 @@ code, pre, h5{
    h5{
       font-size: 1.1em;
    }
-   h4 > a{
+   h4 > em{
       width: 20px;
    }
    code, pre, h5{

@@ -17,7 +17,8 @@ _offsetImg.defaultValues = {
    keepRatio   : true,   // if the image aspect ratio won't be messed with
    ratio       : 0,
    oldWidth    : 0,
-   oldHeight   : 0
+   oldHeight   : 0,
+   defMax      : true
 }
 
 
@@ -34,7 +35,10 @@ _offsetImg.init = function(){
       //
       var off      = this.offs[j],
           elemSettings = off.getAttribute('data-offset'),
-          img      = new Image();
+          img      = new Image(),
+
+          //deep, private clone of the default values
+          defVals  = this.extend( this.defaultValues, {} );
 
       // reading an element's settings
       //
@@ -42,7 +46,7 @@ _offsetImg.init = function(){
       // ** if elemSettings is blank, get image from .style or .getComputedStyle
       // **
          if(!elemSettings){
-            this.settings[j] = this.extend( this.defaultValues, {} );
+            this.settings[j] = this.extend( defVals, {} );
             this.settings[j].src = (off.style.backgroundImage || window.getComputedStyle(off, null).backgroundImage);
             this.settings[j].src = this.settings[j].src.replace('url(','').replace(')','').replace("'","").replace('"','').replace("'","").replace('"','');
             off.style.background = '';
@@ -51,7 +55,17 @@ _offsetImg.init = function(){
          // ** if an attribute is a JSON object
          // **
          else if(elemSettings[0] === '{'){
-            this.settings[j] = this.extend( this.defaultValues, JSON.parse(elemSettings) || {} );
+            elemSettings = JSON.parse(elemSettings);
+
+            // if ANY dimension properties have been set,
+            // REMOVE the default max width/height from the temporary clone of defaultValues
+            if(elemSettings.minWidth || elemSettings.maxWidth || elemSettings.width ||
+               elemSettings.minHeight || elemSettings.maxHeight || elemSettings.height ||
+               elemSettings.snap) {
+               defVals.maxWidth = defVals.maxHeight = 0;
+            }
+
+            this.settings[j] = this.extend( defVals, elemSettings || {} );
             if(!this.settings[j].src){
                this.settings[j].src.replace('url(','').replace(')','').replace("'","").replace('"','').replace("'","").replace('"','');
             }
@@ -60,7 +74,7 @@ _offsetImg.init = function(){
       // ** else, the attribute data is only the image file
       // **
          else{
-            this.settings[j] = this.extend( this.defaultValues, {} );
+            this.settings[j] = this.extend( defVals, {} );
             this.settings[j].src = elemSettings;
          }
 
