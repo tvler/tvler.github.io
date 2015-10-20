@@ -13,9 +13,9 @@
       <h1><a href=".">That Offset Image Grid From<br>The Royal Tenenbaums<br>. Javascript</a></h1>
 
       <pre class="fig-markup">&lt;figure
-  <em>data-offset = &quot;wes1.png&quot;</em>
+  <em>data-offset = &quot;wes1.jpg&quot;</em>
 &gt;&lt;/figure&gt;</pre>
-      <figure data-offset="wes1.png"></figure>
+      <figure data-offset="wes1.jpg"></figure>
 
       <blockquote>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A brand-new javascript file for repeating an HTML element's background image in a manner such that there will always be a vertically and horizontally centered image, and adjacent columns will be vertically offset by exactly one-half of the image's height.</blockquote>
 
@@ -25,25 +25,25 @@
       </h2>
 
       <h3>3 Ways To Use</h3>
-      <h4><em>1 </em><i>HTML + Inline URL</i></h4>
+      <h4><em>1</em><i>HTML + Inline URL</i></h4>
       <pre>&lt;figure
-  <em>data-offset = 'wes1.png'</em>
+  <em>data-offset = 'wes1.jpg'</em>
 &gt;&lt;/figure&gt;</pre>
 
-      <h4><em>2 </em><i>HTML + CSS URL</i></h4>
+      <h4><em>2</em><i>HTML + CSS URL</i></h4>
       <pre>
 figure{
-  <em>background:url('wes1.png')</em>
+  <em>background:url('wes1.jpg')</em>
 }
 
 &lt;figure
   <em>data-offset</em>
 &gt;&lt;/figure&gt;</pre>
 
-      <h4><em>3 </em><i>HTML + JSON</i></h4>
+      <h4><em>3</em><i>HTML + JSON</i></h4>
       <pre>&lt;figure
   <em>data-offset = '{</em>
-    <i>"src"</i>      : "wes1.png",
+    <i>"src"</i>      : "wes1.jpg",
     <i>"width"</i>    : "20%",
     <i>"maxWidth"</i> : 200
   <em>}'</em>
@@ -72,13 +72,13 @@ ending in 'px' or '%'</code></p>
 
    <h3>2 Steps To Run</h3>
 
-   <h4><em>1 </em><i>Link The Javascript File</i></h4>
+   <h4><em>1</em><i>Link The Javascript File</i></h4>
    <pre>&lt;script
   <em>src="ThatOffsetImageGridFromTheRoyalTenenbaums.js"</em>
 &gt;&lt;/script&gt;</pre>
    <h5>This creates the object<em><code style="padding-left: .8em; font-size: .8em;"><i>_offsetImg</i></code></em></h5>
 
-   <h4><em>2 </em><i>Set An Event To Update The Background</i></h4>
+   <h4><em>2</em><i>Set An Event To Update The Background</i></h4>
    <pre><em>_offsetImg.update()</em></pre>
    <p><code>When a data-offset element resizes, it's background needs to update</code></p>
 
@@ -88,11 +88,11 @@ ending in 'px' or '%'</code></p>
 
    <h3>Settings</h3>
 
-   <h4><em>1 </em><i>Add Or Remove Data-Offset Elements</i></h4>
+   <h4><em>1</em><i>Add Or Remove Data-Offset Elements</i></h4>
    <pre><em>_offsetImg.init()</em></pre>
    <p><code>Run this function after an element is added or removed</code></p>
 
-   <h4><em>2 </em><i>Change Dafault Values</i></h4>
+   <h4><em>2</em><i>Change Dafault Values</i></h4>
    <pre><em>_offsetImg.defaultValues</em></pre>
    <p><code>The exposed object's properties can be modified, which may reduce overall markup in some situations</code></p>
    <p><code>If it's modified after DOMContentLoaded, run _offsetImg.init()</code></p>
