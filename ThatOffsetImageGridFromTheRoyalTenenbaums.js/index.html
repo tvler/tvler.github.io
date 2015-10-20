@@ -10,10 +10,9 @@
 </head>
 
 <body>
-      </script>
       <h1>That Offset Image Grid From<br>The Royal Tenenbaums<br>. Javascript</h1>
 
-      <pre>&lt;figure
+      <pre class="fig-markup">&lt;figure
   <em>data-offset = &quot;wes1.png&quot;</em>
 &gt;&lt;/figure&gt;</pre>
       <figure data-offset="wes1.png"></figure>
@@ -26,12 +25,12 @@
       </h2>
 
       <h3>3 Ways To Use</h3>
-      <h4><a>1 </a>HTML + Inline URL</h4>
+      <h4><a>1 </a><i>HTML + Inline URL</i></h4>
       <pre>&lt;figure
   <em>data-offset = 'wes1.png'</em>
 &gt;&lt;/figure&gt;</pre>
 
-      <h4><a>2 </a>HTML + CSS URL</h4>
+      <h4><a>2 </a><i>HTML + CSS URL</i></h4>
       <pre>
 figure{
   <em>background:url('wes1.png')</em>
@@ -41,7 +40,7 @@ figure{
   <em>data-offset</em>
 &gt;&lt;/figure&gt;</pre>
 
-      <h4><a>3 </a>HTML + JSON</h4>
+      <h4><a>3 </a><i>HTML + JSON</i></h4>
       <pre>&lt;figure
   <em>data-offset = '{</em>
     <i>"src"</i>      : "wes1.png",
@@ -50,7 +49,7 @@ figure{
   <em>}'</em>
 &gt;&lt;/figure&gt;</pre>
 
-<h5><a>## </a>Default values</h5>
+<h5>Default values</h5>
 <pre>
 <i>&quot;src&quot;</i>       : &quot;&quot;,</pre>
 <p><code>String of the image's URL<br>
@@ -73,30 +72,30 @@ ending in 'px' or '%'</code></p>
 
    <h3>2 Steps To Run</h3>
 
-   <h4><a>1 </a>Link The Javascript File</h4>
+   <h4><a>1 </a><i>Link The Javascript File</i></h4>
    <pre>&lt;script
   <em>src="ThatOffsetImageGridFromTheRoyalTenenbaums.js"</em>
 &gt;&lt;/script&gt;</pre>
-   <h5><a>## </a>This creates the object<em><code style="padding: 0;">_offsetImg</code></em></h5>
+   <h5>This creates the object<em><code style="padding: 0;">_offsetImg</code></em></h5>
 
-   <h4><a>2 </a>Set An Event To Update The Background</h4>
+   <h4><a>2 </a><i>Set An Event To Update The Background</i></h4>
    <pre><em>_offsetImg.update()</em></pre>
-   <p><code>When a data-offset element resizes, it's background needs to update</p></code>
+   <p><code>When a data-offset element resizes, it's background needs to update</code></p>
 
-   <h5><a>## </a>Example hook</h5>
+   <h5>Example hook</h5>
    <pre>window.onresize =
   <em>_offsetImg.update;</em></pre>
 
    <h3>Settings</h3>
 
-   <h4><a>1 </a>Add Or Remove Data-Offset Elements</h4>
+   <h4><a>1 </a><i>Add Or Remove Data-Offset Elements</i></h4>
    <pre><em>_offsetImg.init()</em></pre>
-   <p><code>Run this function after an element is added or removed</p></code>
+   <p><code>Run this function after an element is added or removed</code></p>
 
-   <h4><a>2 </a>Change Dafault Values</h4>
+   <h4><a>2 </a><i>Change Dafault Values</i></h4>
    <pre><em>_offsetImg.defaultValues</em></pre>
-   <p><code>The exposed object's properties can be modified, which may reduce overall markup for some situations</p></code>
-   <p><code>If it's modified after DOMContentLoaded, run _offsetImg.init()</p></code>
+   <p><code>The exposed object's properties can be modified, which may reduce overall markup in some situations</code></p>
+   <p><code>If it's modified after DOMContentLoaded, run _offsetImg.init()</code></p>
 </body>
 
 <!-- http://www.leavemethewhite.com/caps/thumbnails.php?album=117&page=7
