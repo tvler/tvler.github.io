@@ -132,7 +132,7 @@ header:after{
    vertical-align: middle;
 }
 
-/* 
+/*
  * ---
  * GRID STUFF!!!!!!!
  * ---
@@ -279,12 +279,12 @@ figure:before{
 }
 
 .row-fig{
-   display:table-cell; 
+   display:table-cell;
    width:65%;
 }
 .row-capt{
-   display:table-cell; 
-   vertical-align:middle; 
+   display:table-cell;
+   vertical-align:middle;
    padding:0 8%;
 }
 
@@ -395,7 +395,7 @@ figure figure:not(:first-child){
    padding-bottom: 14em;
 }
 #line{
-   width:100%; 
+   width:100%;
    height:100%;
    position:absolute;
    left:0;
