@@ -87,8 +87,12 @@ a{
 }
 
 h4 > a{
-   display: inline-block;
+   display: table-cell;
    width: 25px;
+}
+h4 > i{
+   display: table-cell;
+   font-style: normal;
 }
 p > code{
    margin-left: 1em;
@@ -122,12 +126,7 @@ code, pre, h5{
       font-size: 1.1em;
    }
    h4 > a{
-      display: table-cell;
       width: 20px;
-   }
-   h4 > i{
-      display: table-cell;
-      font-style: normal;
    }
    code, pre, h5{
       padding-left: 20px;
