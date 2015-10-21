@@ -6,10 +6,10 @@ _offsetImg.defaultValues = {
    // "public"
    src         : '',
    snap        : false,
-   maxWidth    : '100%',
+   maxWidth    : -1,
    minWidth    : 0,
    width       : 0,
-   maxHeight   : '100%',
+   maxHeight   : -1,
    minHeight   : 0,
    height      : 0,
 
@@ -20,7 +20,6 @@ _offsetImg.defaultValues = {
    oldHeight   : 0,
    defMax      : true
 }
-
 
 // initializing and first update
 //
@@ -46,6 +45,7 @@ _offsetImg.init = function(){
       // ** if elemSettings is blank, get image from .style or .getComputedStyle
       // **
          if(!elemSettings){
+            defVals.maxWidth = defVals.maxHeight = '100%';
             this.settings[j] = this.extend( defVals, {} );
             this.settings[j].src = (off.style.backgroundImage || window.getComputedStyle(off, null).backgroundImage);
             this.settings[j].src = this.settings[j].src.replace('url(','').replace(')','').replace("'","").replace('"','').replace("'","").replace('"','');
@@ -62,7 +62,18 @@ _offsetImg.init = function(){
             if(elemSettings.minWidth || elemSettings.maxWidth || elemSettings.width ||
                elemSettings.minHeight || elemSettings.maxHeight || elemSettings.height ||
                elemSettings.snap) {
-               defVals.maxWidth = defVals.maxHeight = 0;
+
+               // override the default maxWidth and maxHeight values
+               // ONLY if they haven't been manually set as default values
+               if(defVals.maxWidth  === -1) defVals.maxWidth  = 0;
+               if(defVals.maxHeight === -1) defVals.maxHeight = 0;
+            }
+            else{
+               // the max width/height are set to -1 initially because
+               // if the global default value of maxWidth or maxHeight is manually set to "100%",
+               // that would be ignored and treated like nothing was manually set by the user :(
+               //
+               defVals.maxWidth = defVals.maxHeight = '100%';
             }
 
             this.settings[j] = this.extend( defVals, elemSettings || {} );
@@ -74,6 +85,7 @@ _offsetImg.init = function(){
       // ** else, the attribute data is only the image file
       // **
          else{
+            defVals.maxWidth = defVals.maxHeight = '100%';
             this.settings[j] = this.extend( defVals, {} );
             this.settings[j].src = elemSettings;
          }
