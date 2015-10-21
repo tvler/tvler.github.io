@@ -54,7 +54,7 @@ pre{
    /*color: rgba(210,216,225,0.4);*/
    color: rgb(110, 116, 126);
    display: block;
-   margin-bottom: .4em;
+   padding-bottom: .4em;
    overflow: scroll;
    -webkit-overflow-scrolling: touch;
            overflow-scrolling: touch;
