@@ -1,3 +1,5 @@
+'use strict'
+
 var _offsetImg = {};
 
 // variables
@@ -18,12 +20,12 @@ _offsetImg.defaultValues = {
    ratio       : 0,
    oldWidth    : 0,
    oldHeight   : 0,
-   defMax      : true
 }
 
 // initializing and first update
 //
 _offsetImg.init = function(){
+
    _offsetImg.offs     = document.querySelectorAll('[data-offset]');
    _offsetImg.imgs     = [];
    _offsetImg.settings = [];
@@ -48,7 +50,11 @@ _offsetImg.init = function(){
             defVals.maxWidth = defVals.maxHeight = '100%';
             this.settings[j] = this.extend( defVals, {} );
             this.settings[j].src = (off.style.backgroundImage || window.getComputedStyle(off, null).backgroundImage);
+
+            // replacing that url('') syntax madness
+            //
             this.settings[j].src = this.settings[j].src.replace('url(','').replace(')','').replace("'","").replace('"','').replace("'","").replace('"','');
+
             off.style.background = '';
          }
 
