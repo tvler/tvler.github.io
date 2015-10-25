@@ -41,19 +41,19 @@
       <h2>Recent projects</h2>
       <div class="table">
          <em>June 2015</em>
-         <a data-scroll class="scroller" href="#community"><h3>Community exhibits</h3></a>: designing Cal Poly Library's exhibit web pages
+         <a data-scroll href="#community"><h3>Community exhibits</h3></a>: designing Cal Poly Library's exhibit web pages
       </div>
       <div class="table">
          <em>June 2015</em>
-         <a data-scroll class="scroller" href="#crowd"><h3>Mapping crowdedness</h3></a>: senior project on visualizing crowdedness by wifi router usage
+         <a data-scroll href="#crowd"><h3>Mapping crowdedness</h3></a>: senior project on visualizing crowdedness by wifi router usage
       </div>
       <div class="table">
          <em>Feb 2015</em>
-         <a data-scroll class="scroller" href="#pizza"><h3>Pizza Club</h3></a>: app developed at Cal Poly's first annual hackathon, winning best design
+         <a data-scroll href="#pizza"><h3>Pizza Club</h3></a>: app developed at Cal Poly's first annual hackathon, winning best design
       </div>
       <div class="table">
          <em>Sept 2014</em>
-         <a data-scroll class="scroller" href="#outloud"><h3>Out Loud</h3></a>: designing a blog for librarians to document their research and thoughts
+         <a data-scroll href="#outloud"><h3>Out Loud</h3></a>: designing a blog for librarians to document their research and thoughts
       </div>
 
       <footer>
@@ -306,7 +306,7 @@
    <script>
       var scroll, anims, heights = [], hasAnim = [], medias = [], artShown = false, titleText, winWid = window.innerWidth, fallBackWidth = 440, fallenBack, fallbacks = [], scrollers = [], smoothscrollin = false;
 
-      for(var i=0, scrollers = document.querySelectorAll('.scroller'); i<scrollers.length; i++){
+      for(var i=0, scrollers = document.querySelectorAll('[data-scroll]'); i<scrollers.length; i++){
          scrollers[i].onclick = function(){
             smoothscrollin = true;
          }
