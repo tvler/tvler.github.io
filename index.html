@@ -11,15 +11,11 @@
 
 <body>
    <section>
-      <header>
-         <div class="title">
-            <h1>Tyler Deitz</h1>
-            <p><a href="/resume-tyler-deitz-2015-v4.pdf">Résumé</a> (pdf), <a href="mailto:tylerdeitz@gmail.com">e-mail</a></p>
-         </div>
-      </header>
+      <h1>Tyler Deitz</h1>
+      <p><a href="/resume-tyler-deitz-2015-v4.pdf">Résumé</a> (pdf), <a href="mailto:tylerdeitz@gmail.com">e-mail</a></p>
 
       <p>Professional Developer And Designer Of Nice Work</p>
-      <p>In Brooklyn, NY, available for hire</p>
+      <p>In San Luis Obispo, CA, available for hire</p>
       <p>
          <a href="https://bandcamp.com/beyblader365">Music</a>,
          <a href="http://digg.com/user/3d9a2575c912414a9e9651ec5dc0473a/diggs.rss">Diggs</a>,
@@ -39,6 +35,10 @@
          <p>General manager of KCPR, Cal Poly radio</p>
       </div>
       <h2>Recent projects</h2>
+      <div class="table">
+         <em>Oct 2015</em>
+         <a data-scroll href="#halfdrop"><h3>ThatHalfDropImageGridFromTheRoyalTenenbaums.js</h3></a>: image-pattern javascript library
+      </div>
       <div class="table">
          <em>June 2015</em>
          <a data-scroll href="#community"><h3>Community exhibits</h3></a>: designing Cal Poly Library's exhibit web pages
@@ -69,76 +69,36 @@
       </footer>
    </section>
 
-   <section id="community">
+   <section id="halfdrop">
       <header>
-         <div class="title">
-            <h2>Community exhibits</h2>
-            <em><a href="#community">2015</a></em>
-            <p>I redesigned the web presence of Cal Poly Library's exhibition spaces, art galleries of student and faculty creative gallery work.</p>
-         </div>
+         <h2>ThatHalfDropImageGridFromTheRoyalTenenbaums.js</h2>
+         <em><a href="#halfdrop">2015</a></em>
       </header>
-
-      <p>The goal of the Community Exhibits redesign was to make the site as engaging as actual exhibit content. It was to bring more attention to the gallery work, and encourage more community members to use our facilities.</p>
-
-      <p>I created two main items: an interactive exhibit calendar, and exhibit cards with information on a particular space. Both items were adapted by the library to be default elements for future projects.</p>
-
-      <p>I discovered Cal Poly Library’s amazing design team through participating in a community exhibit myself, so this project was special to me.</p>
-
-      <p>View Cal Poly Library's <a href="http://lib.calpoly.edu/events-and-exhibits/exhibits/community/">community exhibits</a>.</p>
+      <p>My first js library, initally created for a Cal Poly Library project.</p>
+      <p>Made to repeat an HTML element's background image in a centered half-drop pattern, like that thing (<a href="https://github.com/tvler/ThatHalfDropImageGridFromTheRoyalTenenbaums.js/blob/master/img/example1.jpg">1</a>, <a href="https://github.com/tvler/ThatHalfDropImageGridFromTheRoyalTenenbaums.js/blob/master/img/example2.jpg">2</a>, <a href="https://github.com/tvler/ThatHalfDropImageGridFromTheRoyalTenenbaums.js/blob/master/img/example3.jpg">3</a>) from that movie. Each pattern is extensively customizable through JSON data attributes, with properties based off CSS naming standards.</p>
+      <p>It seemed funny to make the name so long, because I couldn't think of an easier way to describe it to people for the entire time I worked on it. Please send a pull request if you think of a more concise description.</p>
+      <p>View the <a href="ThatHalfDropImageGridFromTheRoyalTenenbaums.js">project website</a>.</p>
+      <p>Code maintained on <a href="https://github.com/tvler/ThatHalfDropImageGridFromTheRoyalTenenbaums.js">Github</a>.</p>
 
       <footer>
          <figure
-         id="exh-cal"
+         id="wes"
          data-elem="img"
-         data-src="/imgs/exh17.png"
-         data-alt="exhibit calendar"
+         data-src="/imgs/halfdrop1.jpg"
+         data-alt="profile picture"
          >
             <div class="holder"></div>
-            <noscript><img src="/imgs/exh15.png" alt="exhibit calendar"></noscript>
+            <noscript> <img src="/imgs/tyler1.jpg" alt="profile picture"> </noscript>
          </figure>
-         <div id="line-strike">
-            <div id="line">
-               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs>
-                     <linearGradient id="exhgradientINV" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="green" stop-opacity="0.0"></stop>
-                        <stop offset="50%" stop-color="rgba(77, 136, 57, 1)" stop-opacity=".8"></stop>
-                        <stop offset="100%" stop-color="green" stop-opacity="0.0"></stop>
-                     </linearGradient>
-                  </defs>
-                  <g>
-                     <rect fill="url(#exhgradientINV) #3F6732" x="0%" y="0%" width="100%" height="100%"></rect>
-                  </g>
-               </svg>
-            </div>
-            <figure
-            class="exh-space anim"
-            data-elem="iframe"
-            data-src="/exh/1.html"
-            >
-               <div class="holder"></div>
-               <noscript><img src="/imgs/exh12.png" alt="exhibit space card"></noscript>
-            </figure>
-            <figure
-            class="exh-space anim"
-            data-elem="iframe"
-            data-src="/exh/2.html"
-            >
-               <div class="holder"></div>
-               <noscript><img src="/imgs/exh13.png" alt="exhibit space card"></noscript>
-            </figure>
-         </div>
       </footer>
    </section>
 
    <section id="crowd">
       <header>
-         <div class="title">
-            <h2>Mapping crowdedness</h2>
-            <em><a href="#crowd">2015</a></em>
-            <p>My senior project, a web app that visualized crowdedness inside buildings using the placement and activity of wifi routers as data points.</p>
-         </div>
+         <h2>Mapping crowdedness</h2>
+         <em><a href="#crowd">2015</a></em>
       </header>
+      <p>My senior project, a web app that visualized crowdedness inside buildings using the placement and activity of wifi routers as data points.</p>
 
       <p>My project was an extension of a map application of my school’s library, existing as a visibly toggled “layer” of the map similar to traffic and satellite layers in Google Maps.</p>
 
@@ -202,14 +162,72 @@
       </footer>
    </section>
 
+   <section id="community">
+      <header>
+         <h2>Community exhibits</h2>
+         <em><a href="#community">2015</a></em>
+      </header>
+      <p>I redesigned the web presence of Cal Poly Library's exhibition spaces, art galleries of student and faculty creative gallery work.</p>
+
+      <p>The goal of the Community Exhibits redesign was to make the site as engaging as actual exhibit content. It was to bring more attention to the gallery work, and encourage more community members to use our facilities.</p>
+
+      <p>I created two main items: an interactive exhibit calendar, and exhibit cards with information on a particular space. Both items were adapted by the library to be default elements for future projects.</p>
+
+      <p>I discovered Cal Poly Library’s amazing design team through participating in a community exhibit myself, so this project was special to me.</p>
+
+      <p>View Cal Poly Library's <a href="http://lib.calpoly.edu/events-and-exhibits/exhibits/community/">community exhibits</a>.</p>
+
+      <footer>
+         <figure
+         id="exh-cal"
+         data-elem="img"
+         data-src="/imgs/exh17.png"
+         data-alt="exhibit calendar"
+         >
+            <div class="holder"></div>
+            <noscript><img src="/imgs/exh15.png" alt="exhibit calendar"></noscript>
+         </figure>
+         <div id="line-strike">
+            <div id="line">
+               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                     <linearGradient id="exhgradientINV" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="green" stop-opacity="0.0"></stop>
+                        <stop offset="50%" stop-color="rgba(77, 136, 57, 1)" stop-opacity=".8"></stop>
+                        <stop offset="100%" stop-color="green" stop-opacity="0.0"></stop>
+                     </linearGradient>
+                  </defs>
+                  <g>
+                     <rect fill="url(#exhgradientINV) #3F6732" x="0%" y="0%" width="100%" height="100%"></rect>
+                  </g>
+               </svg>
+            </div>
+            <figure
+            class="exh-space anim"
+            data-elem="iframe"
+            data-src="/exh/1.html"
+            >
+               <div class="holder"></div>
+               <noscript><img src="/imgs/exh12.png" alt="exhibit space card"></noscript>
+            </figure>
+            <figure
+            class="exh-space anim"
+            data-elem="iframe"
+            data-src="/exh/2.html"
+            >
+               <div class="holder"></div>
+               <noscript><img src="/imgs/exh13.png" alt="exhibit space card"></noscript>
+            </figure>
+         </div>
+      </footer>
+   </section>
+
    <section id="pizza">
       <header>
-         <div class="title">
-            <h2>Pizza Club</h2>
-            <em><a href="#pizza">2015</a></em>
-            <p>Pizza Club was prototyped as a mobile web app at Cal Poly's 2015 Hackathon and won Best Design. I had the initial concept and did design and frontend development.</p>
-         </div>
+         <h2>Pizza Club</h2>
+         <em><a href="#pizza">2015</a></em>
       </header>
+      <p>Pizza Club was prototyped as a mobile web app at Cal Poly's 2015 Hackathon and won Best Design. I had the initial concept and did design and frontend development.</p>
 
       <p>Pizza Club is a secret social network at Cal Poly that lets users know when free pizza is available on campus.
       The info is obtained by signing up for every club with a fake email address and filtering the received messages for mentions of "pizza" at an event.</p>
@@ -228,12 +246,10 @@
 
    <section id="outloud">
       <header>
-         <div class="title">
-            <h2>Out Loud</h2>
-            <em><a href="#outloud">2014</a></em>
-            <p><a href="http://lib.calpoly.edu/outloud/">Out Loud</a> is the Cal Poly Library blog that showcases projects and events the library works on. I rebuilt Out Loud into the library's main Wordpress server and redesigned it with the library's standard interface style.</p>
-         </div>
+         <h2>Out Loud</h2>
+         <em><a href="#outloud">2014</a></em>
       </header>
+      <p><a href="http://lib.calpoly.edu/outloud/">Out Loud</a> is the Cal Poly Library blog that showcases projects and events the library works on. I rebuilt Out Loud into the library's main Wordpress server and redesigned it with the library's standard interface style.</p>
 
       <p>Read the <a href="http://lib.calpoly.edu/outloud/2014/09/introducing-our-updated-and-integrated-out-loud-blog/">blog post</a> I wrote introducing the new design.</p>
 
@@ -291,17 +307,14 @@
       </footer>
    </section>
 
-   <section id="footer">
-       <header>
-      </header>
-
+   <footer>
       <p><em>Hosted on <a href="https://github.com/tvler/tvler.github.io">GitHub</a></em></p>
       <p><em>iPhone template by <a href="http://blixt.io/">Blixt</a></em></p>
       <p><em>Typeset in <a href="https://pilgrimfonts.com/peak/">Peak</a> by <a href="http://okgriffin.com/">Griffin Moore</a></em></p>
       <p><em>Smooth scroll by <a href="https://github.com/cferdinandi/smooth-scroll">Chris Ferdinandi</a></em></p>
       <p><em>Programming and design done <a href="https://www.google.com/maps/d/viewer?mid=zWfeQQe_j7bg.kwtnn9Rtch-Q">here</a></em></p>
       <p><em><i style="color:rgba(68, 68, 68, 0.7)"><a id="art-button">Art Mode</a></i>(?)</em></p>
-   </section>
+   </footer>
 
    <script>
       var scroll, anims, heights = [], hasAnim = [], medias = [], artShown = false, titleText, winWid = window.innerWidth, fallBackWidth = 440, fallenBack, fallbacks = [], scrollers = [], smoothscrollin = false;
@@ -390,7 +403,7 @@
          }
       })
 
-      titleText = document.querySelector('.title p').innerHTML;
+      titleText = document.querySelector('p').innerHTML;
 
      function getAnimHeights(){
         // console.log('getting heights');
@@ -438,12 +451,12 @@
          if(artShown){
             artMode('1', '0', 'rgba(68, 68, 68, 0.7)');
             document.querySelector('body').style.color = '#444';
-            document.querySelector('.title p').innerHTML = titleText;
+            document.querySelector('p').innerHTML = titleText;
          }
          else{
             artMode('0', '1', 'rgba(0, 0, 0, 0)');
             document.querySelector('body').style.color = 'rgba(0, 0, 0, 0)';
-            document.querySelector('.title p').innerHTML += "<i style='color:#444;'>, <a id='remove'>remove art</a></i>";
+            document.querySelector('p').innerHTML += "<i style='color:#444;'>, <a id='remove'>remove art</a></i>";
             document.getElementById('remove').onclick = artClicked;
          }
       }
