@@ -132,7 +132,7 @@ header:after{
    /*border: 1px solid rgb(165, 165, 241);*/
    padding: 1em;
    background: #F4F4F4;
-   box-shadow: 0 0 40px -9px rgba(0, 0, 0, 0.4);
+   box-shadow: 0 0 20px -3px rgba(0, 0, 0, 0.4);
 }
 
 .title em{
