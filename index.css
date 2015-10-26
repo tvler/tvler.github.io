@@ -400,6 +400,7 @@ figure figure:not(:first-child){
 
 #wes{
    max-width: 700px;
+   width: 80vw;
 }
 #wes:before{
    padding-top: 41.4444445%;
