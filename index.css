@@ -49,7 +49,7 @@ h3{
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
-   max-width: 67vw;
+   max-width: 65vw;
    display: inline-block;
    margin-bottom: -.3em;
 }
