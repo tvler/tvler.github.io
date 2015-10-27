@@ -63,7 +63,6 @@
          data-src="/imgs/tyler1.jpg"
          data-alt="profile picture"
          >
-            <div class="holder"></div>
             <noscript> <img src="/imgs/tyler1.jpg" alt="profile picture"> </noscript>
          </figure>
       </footer>
@@ -87,7 +86,6 @@
          data-src="/imgs/halfdrop1.jpg"
          data-alt="profile picture"
          >
-            <div class="holder"></div>
             <noscript> <img src="/imgs/tyler1.jpg" alt="profile picture"> </noscript>
          </figure>
       </footer>
@@ -114,7 +112,6 @@
             data-src="/imgs/map11.svg"
             data-alt="Voronoi diagram off the library's wifi routers"
             >
-               <div class="holder"></div>
                <noscript> <img src="/imgs/map15.png" alt="Voronoi diagram off the library's wifi routers"> </noscript>
             </figure>
             <div class="row-capt"><em>Voronoi diagram off the library's wifi routers</em></div>
@@ -128,7 +125,6 @@
             data-src="/imgs/map12.svg"
             data-alt="Visualizing crowdedness by fog density"
             >
-               <div class="holder"></div>
                <noscript> <img src="/imgs/map16.png" alt="Visualizing crowdedness by fog density"> </noscript>
             </figure>
          </div>
@@ -145,7 +141,6 @@
          data-src="/imgs/map6.png"
          data-alt="periscope screenshot"
          >
-            <div class="holder"></div>
             <noscript> <img src="/imgs/map6.png" alt="periscope screenshot"> </noscript>
          </figure>
          <div class="overlay over-map">
@@ -155,7 +150,6 @@
             data-src="/imgs/map2.png"
             data-alt="project poster"
             >
-               <div class="holder"></div>
                <noscript> <img src="/imgs/map2.png" alt="project poster"> </noscript>
             </figure>
          </div>
@@ -184,7 +178,6 @@
          data-src="/imgs/exh17.png"
          data-alt="exhibit calendar"
          >
-            <div class="holder"></div>
             <noscript><img src="/imgs/exh15.png" alt="exhibit calendar"></noscript>
          </figure>
          <div id="line-strike">
@@ -207,7 +200,6 @@
             data-elem="iframe"
             data-src="/exh/1.html"
             >
-               <div class="holder"></div>
                <noscript><img src="/imgs/exh12.png" alt="exhibit space card"></noscript>
             </figure>
             <figure
@@ -215,7 +207,6 @@
             data-elem="iframe"
             data-src="/exh/2.html"
             >
-               <div class="holder"></div>
                <noscript><img src="/imgs/exh13.png" alt="exhibit space card"></noscript>
             </figure>
          </div>
@@ -238,7 +229,6 @@
          data-elem="iframe"
          data-src="/piz/index.html"
          >
-            <div class="holder"></div>
             <noscript> <img src="/imgs/pizza9.png" alt="pizza club app"> </noscript>
          </figure>
       </footer>
@@ -260,8 +250,6 @@
          data-src="/imgs/outloud1.png"
          data-alt="out loud posts"
          >
-            <div class="holder"></div>
-            <noscript> <img src="/imgs/map2.png" alt="out loud posts"> </noscript>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
                  width="100%" height="100%" style="position:absolute;left:0;top:0;z-index:1;">
 
@@ -288,7 +276,6 @@
                data-src="/imgs/outloud3.png"
                data-alt="out loud sidebar"
                >
-                  <div class="holder"></div>
                   <noscript> <img src="/imgs/outloud3.png" alt="out loud sidebar"> </noscript>
                </figure>
 
@@ -299,7 +286,6 @@
                data-src="/imgs/outloud2.png"
                data-alt="out loud post page"
                >
-                  <div class="holder"></div>
                   <noscript> <img src="/imgs/outloud2.png" alt="out loud post page"> </noscript>
                </figure>
             </div>
@@ -350,7 +336,8 @@
             media.onload = (function(){
                if(!artShown){
                   this.style.opacity = '1';
-                  this.parentElement.firstElementChild.style.opacity = '0';
+                  // this.parentElement.firstElementChild.style.opacity = '0';
+                  this.parentElement.classList.add('shown');
                }
             });
 
@@ -387,6 +374,8 @@
                   if(!artShown){
                      this.style.opacity = '1';
                      this.parentElement.firstElementChild.style.opacity = '0';
+                     this.parentElement.classList.add('shown');
+                     // console.log(this.parentElement);
                   }
                });
 
@@ -449,23 +438,32 @@
 
       function artClicked(){
          if(artShown){
-            artMode('1', '0', 'rgba(68, 68, 68, 0.7)');
+            artMode('1', 'rgba(68, 68, 68, 0.7)');
             document.querySelector('body').style.color = '#444';
             document.querySelector('p').innerHTML = titleText;
          }
          else{
-            artMode('0', '1', 'rgba(0, 0, 0, 0)');
+            artMode('0', 'rgba(0, 0, 0, 0)');
             document.querySelector('body').style.color = 'rgba(0, 0, 0, 0)';
             document.querySelector('p').innerHTML += "<i style='color:#444;'>, <a id='remove'>remove art</a></i>";
             document.getElementById('remove').onclick = artClicked;
          }
       }
 
-      function artMode(m, b, c){
+      function artMode(m, c){
          for(var i=0; i<medias.length; i++){
             // console.log('meddling');
             medias[i].style.opacity = m;
-            medias[i].parentElement.firstElementChild.style.opacity = b;
+            // console.log(m);
+            if(m === '0'){
+               medias[i].parentElement.classList.remove('shown');
+               // console.log('na');
+            }
+            else {
+               medias[i].parentElement.classList.add('shown');
+               // console.log('ya');
+            }
+            // medias[i].parentElement.classList.toggle('shown');
          }
          for(var ems = document.querySelectorAll('em'), i = 0; i<ems.length; i++){
             ems[i].style.color = c;
