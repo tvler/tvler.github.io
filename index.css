@@ -260,15 +260,6 @@ figure:before{
    box-shadow: none;
 }
 
-.droid:before{
-   padding-top: 165%;
-}
-.droid{
-   margin-bottom: 60px;
-   box-shadow: none;
-   max-width: 300px;
-}
-
 .overlay{
    display: inline-block;
 }
@@ -468,15 +459,6 @@ figure figure:not(:first-child){
       margin-bottom: -6em;
    }
 }
-@media (max-width:855px){
-   .droid{
-      display: none;
-   }
-   .over-map{
-      margin-left: 0em;
-      display: block;
-   }
-}
 @media (max-width:800px){
    section:first-child header {padding-top: 2.5vw;}
 }
@@ -545,9 +527,6 @@ figure figure:not(:first-child){
    }
    .post-page{
       margin-left: -20%;
-   }
-   .droid{
-      display: none;
    }
 }
 @media (max-width:595px){
