@@ -1,5 +1,7 @@
-defaults:
-  - scope:
-      type: "posts"
-    values:
-      permalink: /:title/
+permalink: :title/
+
+# defaults:
+#   - scope:
+#       type: "posts"
+#     values:
+#       permalink: /:title/
