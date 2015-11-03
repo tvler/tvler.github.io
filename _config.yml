@@ -1,6 +1,5 @@
 defaults:
   - scope:
-      path: ""
-      type: posts
+      type: "posts"
     values:
-      permalink: :title
+      permalink: /:title/
