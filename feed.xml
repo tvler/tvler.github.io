@@ -7,7 +7,7 @@ layout: null
 <link rel="alternate" type="text/html" href="http://tylerdeitz.co" />
 <link rel="self" type="application/atom+xml" href="http://tylerdeitz.co/feed.xml" />
 <id>http://tylerdeitz.co/feed.xml</id>
-<updated>{{ site.time | date_to_rfc822 }}</updated>
+<updated>{{ site.time | date_to_rfc3339 }}</updated>
 <generator>Jekyll v{{ jekyll.version }}</generator>
 
 {% for post in site.posts limit:10 %}
@@ -16,7 +16,7 @@ layout: null
       {% if post.link %} <link rel="alternate" type="text/html" href="{{ post.link }}" />
       {% else %}         <link rel="alternate" type="text/html" href="http://tylerdeitz.co{{ post.url }}" /> {% endif %}
       <link rel="related" type="text/html" href="http://tylerdeitz.co{{ post.url }}" />
-      <published>{{ post.date | date_to_rfc822 }}</published>
+      <published>{{ post.date | date_to_rfc3339 }}</published>
       <author>
          <name>Tyler Deitz</name>
          <uri>http://tylerdeitz.co/</uri>
