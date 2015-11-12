@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 360 360" enable-background="new 0 0 360 360" xml:space="preserve">
+<g>
+	<circle fill="#88D3DE" cx="180" cy="180" r="180"/>
+	<g>
+		
+			<rect x="143.6" y="111.8" transform="matrix(0.9992 -4.044201e-02 4.044201e-02 0.9992 -6.8407 6.1588)" fill="#BE1E2D" width="10.4" height="120.7"/>
+		<rect x="210.8" y="105.6" fill="#1C75BC" width="11" height="145.1"/>
+		<g>
+			<path fill="#F3786F" d="M199,77.5l-6.6-0.7c-1.6-0.2-3.1,1.1-3.3,2.9l-0.9,8c-0.2,1.8,0.9,3.4,2.6,3.6l6.6,0.7
+				c1.6,0.2,3.1-1.1,3.3-2.9l0.9-8C201.8,79.3,200.7,77.7,199,77.5z"/>
+			<g>
+				<polygon fill="#F39C33" points="189,194.7 176.5,193.3 188.4,86.4 200.9,87.8 				"/>
+				<polygon fill="#FFEABB" points="189,194.7 181.2,208.3 176.5,193.3 				"/>
+				<polygon fill="#636464" points="185.1,201.5 181.2,208.3 178.8,200.8 				"/>
+				<g>
+					<polygon fill="#FFEABB" points="176.5,193.3 178.9,190.4 180.7,193.8 					"/>
+					<polygon fill="#FFEABB" points="180.7,193.8 183.1,190.9 184.8,194.2 					"/>
+					<polygon fill="#FFEABB" points="184.8,194.2 187.2,191.4 189,194.7 					"/>
+				</g>
+			</g>
+			<polygon fill="#E2E2E2" points="200.6,90.3 188.1,88.9 188.7,83.6 201.2,85 			"/>
+		</g>
+		<polygon fill="#FFFFFF" points="243.6,245.6 180,281.7 116.4,245.6 116.4,145.8 243.6,145.8 		"/>
+		<g>
+			<rect x="116.4" y="173.5" fill="#ACACAC" width="3.4" height="1.7"/>
+			<path fill="#ACACAC" d="M231.6,175.2h-7v-1.7h7V175.2z M217.6,175.2h-7v-1.7h7V175.2z M203.7,175.2h-7v-1.7h7V175.2z
+				 M189.7,175.2h-7v-1.7h7V175.2z M175.7,175.2h-7v-1.7h7V175.2z M161.8,175.2h-7v-1.7h7V175.2z M147.8,175.2h-7v-1.7h7V175.2z
+				 M133.8,175.2h-7v-1.7h7V175.2z"/>
+			<rect x="238.6" y="173.5" fill="#ACACAC" width="3.4" height="1.7"/>
+		</g>
+		<rect x="214" y="141.5" fill="#1C75BC" width="4.6" height="20.4"/>
+		<g opacity="0.35">
+			<line fill="#2B3990" x1="218.8" y1="144.4" x2="218.8" y2="135.5"/>
+			<polygon fill="#2B3990" points="218.3,144.4 218.8,135.5 219.2,144.4 			"/>
+		</g>
+		<g opacity="0.35">
+			<line fill="#2B3990" x1="213.8" y1="144.4" x2="213.8" y2="135.5"/>
+			<polygon fill="#2B3990" points="213.4,144.4 213.8,135.5 214.2,144.4 			"/>
+		</g>
+	</g>
+</g>
+</svg>
