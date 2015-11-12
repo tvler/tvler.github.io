@@ -171,7 +171,7 @@ h4, #namecard p{
    overflow: scroll;
    transform: rotateZ(0);
 }
-#scroller a{
+#activity-graph #scroller a {
    margin: 0;
    padding: 0;
 }
@@ -226,8 +226,8 @@ h2{
 
 #breakdown-chart img{
    display: inline-block;
-   width: 84px;
-   padding: 11px;
+   width: 85px;
+   padding: 9px;
    transition: .3s transform;
 }
 #breakdown-chart img:hover{
