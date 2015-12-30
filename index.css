@@ -21,6 +21,7 @@ section:nth-child(even) {background: #ffffff;}
     line-height: 1.3em;
     font-size:.95em;
     background: #F8F8F8;
+    -webkit-text-size-adjust: 100%;
  }
 
 a{
