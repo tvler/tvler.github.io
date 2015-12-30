@@ -19,7 +19,7 @@ section:nth-child(even) {background: #ffffff;}
     font-family:"Peak", -apple-system,".SFNSText-Regular","Helvetica Neue","Roboto","Segoe UI",sans-serif;
     color:#444;
     line-height: 1.3em;
-    font-size:1em;
+    font-size:.95em;
     background: #F8F8F8;
  }
 
