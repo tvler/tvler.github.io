@@ -146,7 +146,7 @@ figure:after{
    visibility: hidden;
 }
 
-figure iframe, figure img, figure noscript img, figure object{
+figure iframe, figure img, figure object{
    -o-object-fit: cover;
       object-fit: cover;
    position: absolute;
@@ -159,7 +159,7 @@ figure iframe, figure img, figure noscript img, figure object{
    -webkit-transition: .2s opacity;
            transition: .2s opacity;
 }
-figure noscript img{
+figure noscript *{
    visibility: visible;
    opacity: 1;
    object-fit:initial;
