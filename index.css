@@ -370,7 +370,7 @@ figure figure:not(:first-child){
 #line svg{
    width: 2%;
    max-width: 60px;
-   min-width: 20px;
+   min-width: 15px;
    height: 100%;
    margin: 0 auto;
 }
