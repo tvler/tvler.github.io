@@ -24,13 +24,14 @@ section:nth-child(even) {background: #ffffff;}
     -webkit-text-size-adjust: 100%;
  }
 
-a{
+a {
    color:inherit;
    text-decoration: none;
-   box-shadow: inset 0px -1px 0 0px;   
+   box-shadow: inset 0px -1px 0 0px;
    cursor: pointer;
 }
-em{
+
+em {
    display: inline-block;
    text-transform: uppercase;
    letter-spacing: -.03em;
@@ -38,7 +39,7 @@ em{
    color: rgba(68, 68, 68, 0.7);
 }
 
-.xternal-links{
+.xternal-links {
    font-size:.96em;
    font-family:-apple-system,".SFNSText-Regular","Helvetica Neue","Roboto","Segoe UI",sans-serif;
    padding-left:1.5em;
@@ -47,10 +48,12 @@ em{
 .left-index {
    display: flex;
 }
-.left-index  em{
+
+.left-index  em {
    min-width: 5.8em;
 }
-.left-index a{
+
+.left-index a {
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
@@ -59,7 +62,7 @@ em{
    margin-bottom: -.3em;
 }
 
-section > *:not(footer){
+section > *:not(footer) {
    max-width: 800px;
    margin-left: auto;
    margin-right: auto;
@@ -67,17 +70,17 @@ section > *:not(footer){
    width: 92%;
 }
 
-section h1, section h2{
+section h1, section h2 {
    font-size: 1.2em;
    letter-spacing: -.02em;
    padding-top: 2rem;
 }
 
-header{
+header {
    padding-top: 0;
 }
 
-header h2{
+header h2 {
    display: inline-block;
    margin-right: 1.2rem;
    max-width: 80%;
@@ -86,16 +89,16 @@ header h2{
    overflow: hidden;
    text-overflow: ellipsis;
 }
-header em{
+header em {
    padding-top: 2rem;
    vertical-align: top;
 }
 
-h1, header{
+h1, header {
    margin-bottom: .8rem;
 }
 
-footer p{
+footer p {
    padding: .4rem 0;
 }
 
@@ -104,14 +107,14 @@ footer p{
  * GRID STUFF!!!!!!!
  * ---
  */
-footer{
+footer {
    text-align: center;
    position: relative;
    overflow: hidden;
    padding: 1rem 0;
 }
 
-figure{
+figure {
    width: 40vw;
    min-width: 280px;
    max-width: 550px;
@@ -124,7 +127,7 @@ figure{
    z-index: 1;
 }
 
-figure:after{
+figure:after {
    content: '';
    background:-webkit-linear-gradient(left, rgba(165, 165, 241, 0.5), rgba(165, 165, 241, 0.1) 35%);
    background:linear-gradient(to right, rgba(165, 165, 241, 0.5), rgba(165, 165, 241, 0.1) 35%);
@@ -138,15 +141,15 @@ figure:after{
            transition: .5s opacity;
 }
 
-.shown:after{
+.shown:after {
    opacity: 0;
 }
 
-#outloud-posts svg{
+#outloud-posts svg {
    visibility: hidden;
 }
 
-figure iframe, figure img, figure object{
+figure iframe, figure img, figure object {
    -o-object-fit: cover;
       object-fit: cover;
    position: absolute;
@@ -159,49 +162,40 @@ figure iframe, figure img, figure object{
    -webkit-transition: .2s opacity;
            transition: .2s opacity;
 }
-figure noscript *{
+figure noscript * {
    visibility: visible;
    opacity: 1;
    object-fit:initial;
 }
-figure iframe{
+figure iframe {
    -o-object-fit: initial;
       object-fit: initial;
 }
 
-figure:before{
+figure:before {
    content: '';
    display: block;
 }
 
-.three-two{
+.three-two {
    max-width: 400px;
 }
-.three-two:before{
+.three-two:before {
    padding-top: 66.7%;
 }
 
-.gdoc:before{
-   padding-top: 139.1%;
-}
-
-.soundcloud{
-   height: 113px;
-   overflow: hidden;
-}
-
-.soundcloud iframe{
+.soundcloud iframe {
    height: 135px;
    -o-object-fit: initial;
       object-fit: initial;
 }
 
-#pizza footer{
+#pizza footer {
    overflow: hidden;
    margin-top: -1em;
 }
 
-.pizza-phone{
+.pizza-phone {
    width: 900px;
    height: 786px;
    max-width: none;
@@ -209,23 +203,25 @@ figure:before{
    overflow: visible;
 }
 
-.pizza-phone iframe{
+.pizza-phone iframe {
    width: 1049px;
    height: 811px;
    position: absolute;
    bottom: 0;
    top: initial;
 }
-#project-poster{
+
+#project-poster {
    width: 50vw;
    min-width: 550px;
    max-width: 700px;
 }
-#project-poster:before{
+
+#project-poster:before {
    padding-top: 63%;
 }
 
-#voronoi{
+#voronoi {
    box-shadow: none;
    position: absolute;
    bottom: 0em;
@@ -234,11 +230,12 @@ figure:before{
    margin: 0;
    max-width: 1000px;
 }
-#voronoi:before{
+
+#voronoi:before {
    padding-top: 53%;
 }
 
-.row{
+.row {
    display: table;
    width: 100%;
    position: relative;
@@ -246,88 +243,92 @@ figure:before{
    max-width:1100px;
 }
 
-.row:after{
+.row:after {
    content: '';
    display: block;
 
 }
 
-.row-fig{
+.row-fig {
    display:table-cell;
    width:65%;
 }
-.row-capt{
+.row-capt {
    display:table-cell;
    vertical-align:middle;
    padding:0 8%;
 }
 
-.map:before{
+.map:before {
    padding-top: 130.85254%;
 }
-.map{
+
+.map {
    max-width: 700px;
    box-shadow: none;
 }
 
-.overlay{
+.overlay {
    display: inline-block;
 }
 
-.over-map{
+.over-map {
    margin-left: -4em;
    vertical-align: bottom;
 }
 
-.over-voron{
+.over-voron {
    margin-left: 35%;
    margin-top: -15%;
 }
 
-.stacker{
+.stacker {
    box-shadow: none;
    overflow: visible;
 }
 
-figure figure{
+figure figure {
    margin: 0;
 }
 
-figure figure:not(:first-child){
+figure figure:not(:first-child) {
    margin-top: 2em;
 }
 
-.table > .numbered{
+.table > .numbered {
    width:20px;
 }
 
-#outloud-posts{
+#outloud-posts {
    max-width: 700px;
    width: 70vw;
 }
-#outloud-posts:before{
+
+#outloud-posts:before {
    padding-top: 138.466667%;
 }
 
-#outloud-side{
+#outloud-side {
    max-width: 430px;
    width: 35vw;
    position: absolute;
 }
-#outloud-side:before{
+
+#outloud-side:before {
    padding-top: 151.50214592%;
 }
 
-.post-page{
+.post-page {
    max-width: 450px;
    width: 30vw;
    position: absolute;
 }
-.post-page:before{
+
+.post-page:before {
    padding-top: 107%;
 }
 
-.exh-space{
+.exh-space {
    width: 800px;
    height: 359px;
    max-width: none;
@@ -336,30 +337,35 @@ figure figure:not(:first-child){
    display: block;
    margin: 0 auto;
 }
-.exh-space + .exh-space{
+
+.exh-space + .exh-space {
    margin-top: 6em;
 }
-.exh-space iframe{
+
+.exh-space iframe {
    width: 1240px;
    left: -440px;
    right:0;
 }
 
-#line-strike{
+#line-strike {
    position:relative;
    margin-top: -1em;
 }
-#line-strike:before{
+
+#line-strike:before {
    content: '';
    display: block;
    padding-top: 14em;
 }
-#line-strike:after{
+
+#line-strike:after {
    content: '';
    display: block;
    padding-bottom: 14em;
 }
-#line{
+
+#line {
    width:100%;
    height:100%;
    position:absolute;
@@ -367,7 +373,8 @@ figure figure:not(:first-child){
    top:0;
    z-index:1;
 }
-#line svg{
+
+#line svg {
    width: 2%;
    max-width: 60px;
    min-width: 15px;
@@ -375,12 +382,13 @@ figure figure:not(:first-child){
    margin: 0 auto;
 }
 
-#exh-cal{
+#exh-cal {
    width: 80vw;
    max-width: 900px;
    box-shadow: none;
 }
-#exh-cal:before{
+
+#exh-cal:before {
    padding-top:121.55085599%;
 }
 
@@ -391,7 +399,8 @@ figure figure:not(:first-child){
    top: 0;
    left: 0;
 }
-#over-up-contain{
+
+#over-up-contain {
    position: relative;
    max-width: 1675px;
    display: block;
@@ -399,15 +408,17 @@ figure figure:not(:first-child){
    height: 100%;
    width: 100%;
 }
-.fall{
+
+.fall {
    object-fit:initial;
 }
 
-#wes{
+#wes {
    max-width: 700px;
    width: 80vw;
 }
-#wes:before{
+
+#wes:before {
    padding-top: 41.4444445%;
 }
 
@@ -416,21 +427,22 @@ figure figure:not(:first-child){
  * PHONE TIME
  * ---
  */
-@media (max-width:940px){
-   #over-up{
+@media (max-width:940px) {
+   #over-up {
       margin-left: -10%;
       margin-top: -53%;
       white-space: nowrap;
       position: static;
    }
 
-   #outloud-side{
+   #outloud-side {
       position: relative;
       bottom: initial !important;
       left: initial !important;
       width: 35vw;
    }
-   .post-page{
+
+   .post-page {
       position: relative;
       z-index: 2;
       left:initial !important;
@@ -439,16 +451,19 @@ figure figure:not(:first-child){
       margin-left: -10%;
       top:initial !important;
    }
-   #outloud-posts svg{
+
+   #outloud-posts svg {
       visibility: visible;
    }
-   .exh-space{
+
+   .exh-space {
       -webkit-transform: scale(.9);
           -ms-transform: scale(.9);
               transform: scale(.9);
       margin-left: calc(50% - 400px);
    }
-   .pizza-phone{
+
+   .pizza-phone {
       margin-left: calc(50% - 450px);
       margin-top: -7%;
       margin-bottom: -7%;
@@ -457,7 +472,9 @@ figure figure:not(:first-child){
               transform: scale(.8);
    }
 }
-@media (max-width:890px){
+
+@media (max-width:890px) {
+
    .exh-space{
       -webkit-transform: scale(.8);
           -ms-transform: scale(.8);
@@ -465,15 +482,18 @@ figure figure:not(:first-child){
       margin-top: -6em;
       margin-bottom: -4em;
    }
-   .exh-space + .exh-space{
+
+   .exh-space + .exh-space {
       margin-bottom: -6em;
    }
 }
-@media (max-width:800px){
+
+@media (max-width:800px) {
    section:first-child header {padding-top: 2.5vw;}
 }
-@media (max-width:770px){
-   .pizza-phone{
+
+@media (max-width:770px) {
+   .pizza-phone {
       margin-top: -12%;
       margin-bottom: -14%;
       -webkit-transform: scale(.7);
@@ -481,20 +501,23 @@ figure figure:not(:first-child){
               transform: scale(.7);
    }
 }
-@media (max-width:700px){
-   .exh-space{
+
+@media (max-width:700px) {
+   .exh-space {
       -webkit-transform: scale(.7);
           -ms-transform: scale(.7);
               transform: scale(.7);
       margin-top: -8em;
       margin-bottom: -7em;
    }
+
    .exh-space + .exh-space {
        margin-bottom: -8em;
    }
 }
-@media (max-width:650px){
-   .pizza-phone{
+
+@media (max-width:650px) {
+   .pizza-phone {
       margin-top: -22%;
       margin-bottom: -23%;
       -webkit-transform: scale(.6);
@@ -502,56 +525,67 @@ figure figure:not(:first-child){
               transform: scale(.6);
    }
 }
-@media (max-width:630px){
-   footer figure, #project-poster, #outloud-posts{
+
+@media (max-width:630px) {
+   footer figure, #project-poster, #outloud-posts {
       width: 80vw;
    }
-   #project-poster{
+
+   #project-poster {
       min-width: 280px;
    }
 
-   .row{
+   .row {
       display: block;
    }
-   .row:after{
+
+   .row:after {
       padding-top: 108%;
    }
-   .row-fig{
+
+   .row-fig {
       position: absolute;
       bottom: 0;
       left: 5vw;
       min-width: initial;
       width:80%;
    }
-   .row-capt{
+
+   .row-capt {
       display: block;
       width: 95vw;
       margin: 0 auto;
       padding: 0;
    }
-   .row + .row{
+
+   .row + .row {
       padding-top: 2em;
    }
-   footer #over-up .post-page{
+
+   footer #over-up .post-page {
       width: 40vw;
    }
-   .post-page{
+
+   .post-page {
       margin-left: -20%;
    }
 }
-@media (max-width:595px){
-   .exh-space{
+
+@media (max-width:595px) {
+   .exh-space {
       -webkit-transform: scale(.6);
           -ms-transform: scale(.6);
               transform: scale(.6);
       margin-top: -10em;
       margin-bottom: -10em;
    }
+
    .exh-space + .exh-space {
        margin-bottom: -10em;
    }
 }
-@media (max-width:560px){
+
+@media (max-width:560px) {
    .pizza-phone{
       margin-top: -32%;
       margin-bottom: -34%;
@@ -560,20 +594,23 @@ figure figure:not(:first-child){
                  transform: scale(.5);
    }
 }
-@media (max-width:510px){
-   .exh-space{
+
+@media (max-width:510px) {
+   .exh-space {
       -webkit-transform: scale(.5);
           -ms-transform: scale(.5);
               transform: scale(.5);
       margin-top: -13em;
       margin-bottom: -13em;
    }
+
    .exh-space + .exh-space {
        margin-bottom: -13em;
    }
 }
-@media (max-width:470px){
-   .pizza-phone{
+
+@media (max-width:470px) {
+   .pizza-phone {
       margin-top: -45%;
       margin-bottom: -50%;
          -webkit-transform: scale(.4);
@@ -582,24 +619,26 @@ figure figure:not(:first-child){
    }
 }
 
-@media (max-width:440px){
-   .post-page{
+@media (max-width:440px) {
+   .post-page {
       margin-left: -40%;
    }
-   .exh-space{
+
+   .exh-space {
       -webkit-transform: scale(.36);
           -ms-transform: scale(.36);
               transform: scale(.36);
       margin-top: -16em;
       margin-bottom: -16em;
    }
+
    .exh-space + .exh-space {
        margin-bottom: -16em;
    }
 }
 
-@media (max-width:370px){
-   .pizza-phone{
+@media (max-width:370px) {
+   .pizza-phone {
       margin-top: -68%;
       margin-bottom: -71%;
          -webkit-transform: scale(.335);
