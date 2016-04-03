@@ -32,6 +32,10 @@ section:nth-child(even) {background: white;}
     -webkit-text-size-adjust: 100%;
  }
 
+ section + section {
+    padding-top: 30px;
+}
+
 a {
    color:inherit;
    text-decoration: none;
@@ -94,24 +98,32 @@ body > section > h1, h2 {
    padding: 30px 0 10px;
 }
 
+body > section > header {
+   max-width: 500px;
+   border-radius: 8px;
+   border: 1px solid #E0E0E0;
+   margin-bottom: 30px;
+   width: 80%;
+}
+
 h2 {
-   font-size: 18px;
+   font-size: 17px;
    display: inline-block;
    margin-right: 19px;
    max-width: 80%;
    vertical-align: bottom;
    word-wrap: break-word;
    text-overflow: ellipsis;
-   padding: 20px 0 8px;
-}
-
-.xternal-links + .left-index {
-   padding-top: 30px;
+   padding: 10px 10px 20px;
 }
 
 header em {
    vertical-align: top;
-   padding-top: 20px;
+   padding-top: 10px;
+}
+
+.xternal-links + .left-index {
+   padding-top: 30px;
 }
 
 /*
