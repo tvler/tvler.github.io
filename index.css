@@ -38,7 +38,6 @@ hr {
 }
 
 header > *:not(hr) {
-   display: block;
    padding: 10px 30px;
    color: #7A7C7D;
    font-size: 14px;
@@ -89,7 +88,7 @@ p::before {
    border-radius: 4px;
    font-size: 13px;
    text-align: center;
-   flex-basis: auto;
+   flex-basis: 0;
    flex-grow: 1;
 }
 
