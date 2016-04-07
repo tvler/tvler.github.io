@@ -41,7 +41,7 @@ header > *:not(hr) {
    -webkit-tap-highlight-color: transparent;
 }
 
-body:not(.touch) header > a:hover:not(.button), a:active:not(.button) {
+body:not(.touch) > header > a:hover:not(.button), a:active:not(.button) {
    background: linear-gradient(-10deg, rgba(59,153,252,0.93), #3B99FC);
    color: white !important;
 }
