@@ -11,12 +11,10 @@ body {
    -webkit-text-size-adjust: 100%;
    background: #FAFAFA;
    display: flex;
-   flex-wrap: wrap;
    justify-content: center;
 }
 
 header {
-   width: 100%;
    margin: 20px 30px;
    border: 1px solid #E9E9E9;
    box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.11);
@@ -25,6 +23,12 @@ header {
    padding: 5px 0;
    background-color: rgba(255, 255, 255, 0.95);
    overflow: hidden;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+header > * {
+   flex-basis: 100%;
 }
 
 hr {
@@ -78,15 +82,15 @@ p::before {
 }
 
 .button {
-   margin: 5px 0 5px 30px;
+   margin: 5px 30px;
    padding: 7px;
    background: #FAFAFA;
    border: 1px solid #E9E9E9;
    border-radius: 4px;
-   display: inline-block;
-   width: calc(50% - 40px);
    font-size: 13px;
    text-align: center;
+   flex-basis: auto;
+   flex-grow: 1;
 }
 
 .button:active {
@@ -94,7 +98,7 @@ p::before {
 }
 
 .button + .button {
-   margin-left: 14px;
+   margin-left: -14px;
 }
 
 .button:focus {
@@ -112,9 +116,4 @@ header > a:first-child {
    font-size: 16px;
    font-weight: 700;
    padding: 9px 30px;
-}
-
-section {
-   flex-basis: 100%;
-   max-width: 500px;
 }
