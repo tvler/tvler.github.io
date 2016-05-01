@@ -26,7 +26,7 @@
 
       <hr>
       <h2>Software Projects</h2>
-      <a href="https://github.com/tvler/lazy-progressive-enhancement">lazy-progressive-enhancement.js</a>
+      <a href="lazy-progressive-enhancement">lazy-progressive-enhancement.js</a>
       <a href="https://gist.github.com/tvler/8fd53d11ed775ebc72419bb5d96b8696">window.onwheneva</a>
       <a href="ThatHalfDropImageGridFromTheRoyalTenenbaums.js">That Halfdrop Image Grid From The Royal Tenenbaums .JavaScript</a>
    </header>
@@ -37,6 +37,13 @@
              bodyClass = document.querySelector('body').classList,
              touchSet  = false;
 
+         function toggleTouch() {
+            if(touchSet) {
+               bodyClass.remove('touch');
+               touchSet = false;
+            };
+         }
+
          for(var i = 0; i < anchors.length; i++) {
             anchors[i].addEventListener('touchstart', (function(ev) {
                if(!touchSet) {
@@ -46,12 +53,7 @@
             }), false);
          }
 
-         window.onmousemove = (function() {
-            if(touchSet) {
-               bodyClass.remove('touch');
-               touchSet = false;
-            };
-         });
+         window.onmousemove = toggleTouch;
       })();
    </script>
 </body>
