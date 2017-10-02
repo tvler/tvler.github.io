@@ -18,7 +18,11 @@ import outer3_2x from './outer/3-2x.png';
 
 export default withTouch(class extends React.PureComponent {
    setRef = ref => {
-      ref.play();
+      const promise = ref.play();
+
+      if (promise !== undefined) {
+         promise.catch(() => {});
+      }
    }
 
    render = () => {
