@@ -1,4 +1,5 @@
 import React from 'react';
+import resume from './resume-tyler-deitz.pdf';
 import CardProjectLink from './card/ProjectLink';
 import CardBlackFridayHero from './card/BlackFridayHero';
 import CardFormyCode from './card/FormyCode';
@@ -92,7 +93,7 @@ export default () => (
                {
                   [
                      ['mailto:tylerdeitz@gmail.com', 'Email'],
-                     ['/', 'Résumé'],
+                     [resume, 'Résumé'],
                      ['http://github.com/tvler', 'GitHub'],
                      ['https://www.are.na/tyler-deitz', 'Are.na'],
                   ].map(([href, children]) => (
