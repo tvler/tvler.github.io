@@ -1,6 +1,5 @@
 import React from 'react';
 import CardProjectLink from './card/ProjectLink';
-// import CardEmpty from './card/Empty';
 import CardBlackFridayHero from './card/BlackFridayHero';
 import CardFormyCode from './card/FormyCode';
 import CardLazyProgressiveEnhancementCode from './card/LazyProgressiveEnhancementCode';
@@ -19,6 +18,7 @@ const projects = [
             name: 'ifixit/formy',
             description: 'Create your form as an object and render it in React however you want.',
             link: 'https://github.com/iFixit/formy',
+            disabled: true,
          }} />,
          <CardFormy />,
          <CardFormyCode />,
@@ -33,6 +33,7 @@ const projects = [
             name: 'tvler/withdomprops',
             description: 'Hoist DOM node properties and pseudoclasses up to your React component.',
             link: 'https://github.com/tvler/withdomprops',
+            disabled: true,
          }} />,
          <CardWithDomPropsCode />,
       ],
@@ -45,7 +46,7 @@ const projects = [
             type: 'ifixit',
             name: 'Pro Tech Toolkit',
             description: 'Featured product page for iFixit\'s best seller. Design and frontend.',
-            link: 'https://github.com/tvler/withdomprops',
+            link: 'https://www.ifixit.com/pro-tech-toolkit/',
          }} />,
          <CardProTechToolkit />,
          <CardProTechToolkitHero />,
@@ -59,7 +60,7 @@ const projects = [
             type: 'ifixit',
             name: 'Black Friday – iFixit',
             description: 'Black Friday 2016 popup shop. Frontend and motion.',
-            link: 'https://github.com/tvler/withdomprops',
+            link: 'http://www.tylerdeitz.com/ifixit-black-friday/',
          }} />,
          <CardBlackFridayHero />,
       ],
