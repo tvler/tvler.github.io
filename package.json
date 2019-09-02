@@ -4,13 +4,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "gh-pages": "^1.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14",
-    "tachyons": "^4.8.1",
-    "typeface-lato": "0.0.35",
-    "typeface-work-sans": "0.0.35"
+    "gh-pages": "2.1.1",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-scripts": "3.1.1",
+    "tachyons": "4.11.1"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -19,5 +17,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
