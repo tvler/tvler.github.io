@@ -1,4 +1,8 @@
 import React from "react";
+import laundry1 from "./laundry/1.png";
+import laundry2 from "./laundry/2.png";
+import laundry3 from "./laundry/3.png";
+import laundry4 from "./laundry/4.png";
 
 export default () => (
   <div className="flex flex-column absolute w-100 h-100">
@@ -20,9 +24,26 @@ export default () => (
       </div>
     </div>
 
-    <div className="mt4 mb4 flex flex-column">
-      <span className="lh-big f6 tc cool-black">
-        Tyler lives in Los Angeles <br /> and works at Opendoor.
+    <div className="mv4 flex flex-column items-center">
+      <div className="flex flex-row">
+        {[laundry1, laundry2, laundry3, laundry4].map((src, i) => {
+          const widthHeight = 18;
+          return (
+            <img
+              key={1}
+              className={i ? "ml2" : ""}
+              width={widthHeight}
+              height={widthHeight}
+              alt=""
+              src={src}
+            />
+          );
+        })}
+      </div>
+      <span className="lh-big f6 tc cool-black mt2">
+        Tyler lives in Los Angeles
+        <br />
+        and works at Opendoor
       </span>
     </div>
   </div>
