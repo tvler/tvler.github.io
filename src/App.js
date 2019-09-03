@@ -17,20 +17,20 @@ export default () => (
           <a
             href={href}
             children={children}
-            key={href}
+            key={i}
             className={`cool-blue no-underline tracked ${i ? "ml3" : ""}`}
           />
         ))}
       </div>
     </div>
 
-    <div className="mv4 flex flex-column items-center">
+    <div className="flex flex-column items-center mv3">
       <div className="flex flex-row">
         {[laundry1, laundry2, laundry3, laundry4].map((src, i) => {
           const widthHeight = 18;
           return (
             <img
-              key={1}
+              key={i}
               className={i ? "ml2" : ""}
               width={widthHeight}
               height={widthHeight}
