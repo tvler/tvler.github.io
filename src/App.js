@@ -24,7 +24,7 @@ export default () => (
       </div>
     </div>
 
-    <div className="flex flex-column items-center mv3">
+    <div className="flex flex-column items-center mt3 mb3-safe-area">
       <div className="flex flex-row">
         {[laundry1, laundry2, laundry3, laundry4].map((src, i) => {
           const widthHeight = 18;
