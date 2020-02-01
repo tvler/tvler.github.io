@@ -15,8 +15,8 @@
     <div class="flex italic flex-column absolute w-100 h-100">
       <div class="flex flex-column justify-center flex-grow-1">
         <h1 class="ma0 f3 cool-black tc fw7">Tyler Deitz</h1>
-        <span class="mt2 f5 ttu fw7 tc"
-          ><a
+        <div class="mt2 f5 ttu fw7 tc">
+          <a
             href="http://github.com/tvler"
             class="cool-blue tracked no-underline"
             >GitHub</a
@@ -32,9 +32,10 @@
             class="absolute ml2 input-reset bg-white button-reset b--none pa0 cool-blue fw7 anim-delay ellipses-loader"
           >
             …
-          </button></span
-        ><span hidden class="mt2 f5 ttu fw7 tc"
-          ><a
+          </button>
+        </div>
+        <div hidden class="mt2 f5 ttu fw7 tc">
+          <a
             href="mailto:tylerdeitz@gmail.com"
             class="cool-blue tracked no-underline"
             >E-mail</a
@@ -42,9 +43,10 @@
             class="absolute ml2 input-reset bg-white button-reset b--none pa0 cool-blue fw7 ellipses-loader"
           >
             …
-          </button></span
-        ><span hidden class="mt2 f5 ttu fw7 tc"
-          ><a
+          </button>
+        </div>
+        <div hidden class="mt2 f5 ttu fw7 tc">
+          <a
             href="https://www.linkedin.com/in/tyler-deitz-3a985018b/"
             class="cool-blue tracked no-underline"
             >LinkedIn</a
@@ -52,9 +54,10 @@
             class="absolute ml2 input-reset bg-white button-reset b--none pa0 cool-blue fw7 ellipses-loader"
           >
             …
-          </button></span
-        ><span hidden class="mt2 f5 ttu fw7 tc"
-          ><a
+          </button>
+        </div>
+        <div hidden class="mt2 f5 ttu fw7 tc">
+          <a
             href="https://bandcamp.com/beyblader365"
             class="cool-blue tracked no-underline"
             >Bandcamp</a
@@ -62,14 +65,15 @@
             class="absolute ml2 input-reset bg-white button-reset b--none pa0 cool-blue fw7 ellipses-loader"
           >
             …
-          </button></span
-        ><span hidden class="mt2 f5 ttu fw7 tc"
-          ><a
+          </button>
+        </div>
+        <div hidden class="mt2 f5 ttu fw7 tc">
+          <a
             href="https://www.instagram.com/tvler/"
             class="cool-blue tracked no-underline"
             >Instagram</a
-          ><span class="absolute ml2 cool-black fw5">:)</span></span
-        >
+          ><span class="absolute ml2 cool-black fw5">:)</span>
+        </div>
       </div>
       <div class="flex flex-column items-center mt3 mb3-safe-area">
         <div class="flex flex-row">
@@ -104,17 +108,16 @@
         >
       </div>
     </div>
+    <script>
+      for (const button of document.querySelectorAll("button")) {
+        button.addEventListener("click", () => {
+          button.setAttribute("hidden", "");
+          const hiddenSpan = document.querySelector("div[hidden]");
+          if (hiddenSpan) {
+            hiddenSpan.removeAttribute("hidden");
+          }
+        });
+      }
+    </script>
   </body>
-
-  <script>
-    for (const button of document.querySelectorAll("button")) {
-      button.addEventListener("click", () => {
-        button.setAttribute("hidden", "");
-        const hiddenSpan = document.querySelector("span[hidden]");
-        if (hiddenSpan) {
-          hiddenSpan.removeAttribute("hidden");
-        }
-      });
-    }
-  </script>
 </html>
