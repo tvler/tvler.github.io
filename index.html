@@ -6,24 +6,17 @@
       name="viewport"
       content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Work+Sans:400,700"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="/favicon.ico" />
     <title>Tyler Deitz</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
-    />
-    <link href="/index.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/tachyons.css" />
+    <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
-    <div class="flex flex-column absolute w-100 h-100">
+    <div class="flex italic flex-column absolute w-100 h-100">
       <div class="flex flex-column justify-center flex-grow-1">
         <h1 class="ma0 f3 cool-black tc fw7">Tyler Deitz</h1>
-        <div class="mt2 f5 lh-solid ttu fw7 tc">
-          <a
+        <span class="mt2 f5 ttu fw7 tc"
+          ><a
             href="http://github.com/tvler"
             class="cool-blue tracked no-underline"
             >GitHub</a
@@ -35,8 +28,48 @@
             href="https://twitter.com/ty___ler"
             class="cool-blue no-underline tracked ml3"
             >Twitter</a
+          ><button
+            class="absolute ml2 input-reset bg-white button-reset b--none pa0 cool-blue fw7 anim-delay ellipses-loader"
           >
-        </div>
+            …
+          </button></span
+        ><span hidden class="mt2 f5 ttu fw7 tc"
+          ><a
+            href="mailto:tylerdeitz@gmail.com"
+            class="cool-blue tracked no-underline"
+            >E-mail</a
+          ><button
+            class="absolute ml2 input-reset bg-white button-reset b--none pa0 cool-blue fw7 ellipses-loader"
+          >
+            …
+          </button></span
+        ><span hidden class="mt2 f5 ttu fw7 tc"
+          ><a
+            href="https://www.linkedin.com/in/tyler-deitz-3a985018b/"
+            class="cool-blue tracked no-underline"
+            >LinkedIn</a
+          ><button
+            class="absolute ml2 input-reset bg-white button-reset b--none pa0 cool-blue fw7 ellipses-loader"
+          >
+            …
+          </button></span
+        ><span hidden class="mt2 f5 ttu fw7 tc"
+          ><a
+            href="https://bandcamp.com/beyblader365"
+            class="cool-blue tracked no-underline"
+            >Bandcamp</a
+          ><button
+            class="absolute ml2 input-reset bg-white button-reset b--none pa0 cool-blue fw7 ellipses-loader"
+          >
+            …
+          </button></span
+        ><span hidden class="mt2 f5 ttu fw7 tc"
+          ><a
+            href="https://www.instagram.com/tvler/"
+            class="cool-blue tracked no-underline"
+            >Instagram</a
+          ><span class="absolute ml2 cool-black fw5">:)</span></span
+        >
       </div>
       <div class="flex flex-column items-center mt3 mb3-safe-area">
         <div class="flex flex-row">
@@ -72,4 +105,16 @@
       </div>
     </div>
   </body>
+
+  <script>
+    for (const button of document.querySelectorAll("button")) {
+      button.addEventListener("click", () => {
+        button.setAttribute("hidden", "");
+        const hiddenSpan = document.querySelector("span[hidden]");
+        if (hiddenSpan) {
+          hiddenSpan.removeAttribute("hidden");
+        }
+      });
+    }
+  </script>
 </html>
