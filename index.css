@@ -21,12 +21,7 @@
   color: #344350;
 }
 .mb3-safe-area {
-  margin-bottom: 1rem;
-}
-@supports (margin-bottom: max(0px)) {
-  .mb3-safe-area {
-    margin-bottom: max(1rem, env(safe-area-inset-bottom));
-  }
+  margin-bottom: max(1rem, env(safe-area-inset-bottom));
 }
 .anim-delay {
   animation-delay: 0.3s;
